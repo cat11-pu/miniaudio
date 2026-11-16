@@ -5314,6 +5314,84 @@ MA_API ma_vec3f ma_spatializer_get_velocity(const ma_spatializer* pSpatializer);
 MA_API void ma_spatializer_get_relative_position_and_direction(const ma_spatializer* pSpatializer, const ma_spatializer_listener* pListener, ma_vec3f* pRelativePos, ma_vec3f* pRelativeDir);
 
 
+/*
+Offline Stereo Spatializer
+--------------------------
+
+This is a small, allocation-free spatializer intended for offline rendering. It takes mono
+f32 input and writes interleaved stereo f32 output. This is useful when a game wants to
+bake positional audio into a stereo file without running the device, engine or node graph.
+
+The spatializer uses an equal-power panning law. The pan value is the projection of the
+normalized source direction onto the listener's right axis and is in the range of -1 (left)
+to +1 (right). The per-channel gains are:
+
+    angle = (pan + 1) * pi / 4
+    left  = cos(angle) * distanceGain
+    right = sin(angle) * distanceGain
+
+This means a centered source has a gain of 0.70710678 on each channel, while a fully left or
+right source has a gain of 1 on the near channel and 0 on the far channel.
+
+Distance attenuation uses the same inverse, linear and exponential models as ma_spatializer.
+When the attenuation model is ma_attenuation_model_none, the distance gain is 1.
+
+Position updates only calculate new target values. The pan and distance gain are linearly
+ramped over config.smoothingTimeInSeconds during rendering, so updating parameters between
+blocks does not introduce a step in the output. A smoothing time of 0 disables smoothing.
+The spatializer owns no heap memory and never allocates in an update or render call. It is not
+thread-safe; a single instance must be updated and rendered from the same thread. Input and
+output buffers must not overlap.
+
+The pan, distance and distance-gain getters return the target values calculated by the most
+recent update. Use ma_offline_spatializer_get_current_channel_gains() to inspect the smoothed
+values at the current ramp position.
+*/
+typedef struct
+{
+    ma_uint32 sampleRate;
+    ma_attenuation_model attenuationModel;
+    ma_handedness handedness;
+    float minDistance;
+    float maxDistance;
+    float rolloff;
+    float minGain;
+    float maxGain;
+    float smoothingTimeInSeconds;   /* Set to 0 to disable smoothing. */
+} ma_offline_spatializer_config;
+
+MA_API ma_offline_spatializer_config ma_offline_spatializer_config_init(ma_uint32 sampleRate);
+
+
+typedef struct
+{
+    ma_offline_spatializer_config config;
+    ma_vec3f sourcePosition;
+    ma_vec3f listenerPosition;
+    ma_vec3f listenerForward;
+    ma_vec3f listenerUp;
+    float distance;
+    float targetPan;                /* -1 is left and +1 is right. */
+    float targetDistanceGain;
+    float currentPan;
+    float currentDistanceGain;
+    float panStart;
+    float distanceGainStart;
+    ma_uint32 smoothingFrameCount;
+    ma_uint32 smoothingFrameCursor;
+} ma_offline_spatializer;
+
+MA_API ma_result ma_offline_spatializer_init(const ma_offline_spatializer_config* pConfig, ma_offline_spatializer* pSpatializer);
+MA_API void ma_offline_spatializer_uninit(ma_offline_spatializer* pSpatializer);
+MA_API ma_result ma_offline_spatializer_update(ma_offline_spatializer* pSpatializer, ma_vec3f sourcePosition, ma_vec3f listenerPosition, ma_vec3f listenerForward, ma_vec3f listenerUp);
+MA_API ma_result ma_offline_spatializer_process_pcm_frames(ma_offline_spatializer* pSpatializer, float* pFramesOut, const float* pFramesIn, ma_uint64 frameCount);
+MA_API float ma_offline_spatializer_get_pan(const ma_offline_spatializer* pSpatializer);
+MA_API float ma_offline_spatializer_get_distance(const ma_offline_spatializer* pSpatializer);
+MA_API float ma_offline_spatializer_get_distance_gain(const ma_offline_spatializer* pSpatializer);
+MA_API ma_result ma_offline_spatializer_get_target_channel_gains(const ma_offline_spatializer* pSpatializer, float* pLeft, float* pRight);
+MA_API ma_result ma_offline_spatializer_get_current_channel_gains(const ma_offline_spatializer* pSpatializer, float* pLeft, float* pRight);
+
+
 
 /************************************************************************************************************************************************************
 *************************************************************************************************************************************************************
@@ -53218,6 +53296,389 @@ MA_API void ma_spatializer_get_relative_position_and_direction(const ma_spatiali
             pRelativeDir->z = m[0][2] * v.x + m[1][2] * v.y + m[2][2] * v.z;
         }
     }
+}
+
+
+
+static ma_bool32 ma_offline_spatializer_is_finite(float x)
+{
+    return (x == x) && (x <= MA_FLT_MAX) && (x >= -MA_FLT_MAX);
+}
+
+static ma_bool32 ma_offline_spatializer_is_vec3f_finite(ma_vec3f v)
+{
+    return ma_offline_spatializer_is_finite(v.x) &&
+           ma_offline_spatializer_is_finite(v.y) &&
+           ma_offline_spatializer_is_finite(v.z);
+}
+
+static ma_result ma_offline_spatializer_validate_config(const ma_offline_spatializer_config* pConfig)
+{
+    if (pConfig == NULL) {
+        return MA_INVALID_ARGS;
+    }
+
+    if (pConfig->sampleRate == 0) {
+        return MA_INVALID_ARGS;
+    }
+
+    if (pConfig->attenuationModel != ma_attenuation_model_none    &&
+        pConfig->attenuationModel != ma_attenuation_model_inverse &&
+        pConfig->attenuationModel != ma_attenuation_model_linear  &&
+        pConfig->attenuationModel != ma_attenuation_model_exponential)
+    {
+        return MA_INVALID_ARGS;
+    }
+
+    if (pConfig->handedness != ma_handedness_right && pConfig->handedness != ma_handedness_left) {
+        return MA_INVALID_ARGS;
+    }
+
+    if (!ma_offline_spatializer_is_finite(pConfig->minDistance) || !(pConfig->minDistance > 0)) {
+        return MA_INVALID_ARGS;
+    }
+
+    if (!ma_offline_spatializer_is_finite(pConfig->maxDistance) || !(pConfig->maxDistance >= pConfig->minDistance)) {
+        return MA_INVALID_ARGS;
+    }
+
+    if (!ma_offline_spatializer_is_finite(pConfig->rolloff) || !(pConfig->rolloff >= 0)) {
+        return MA_INVALID_ARGS;
+    }
+
+    if (!ma_offline_spatializer_is_finite(pConfig->minGain) || !(pConfig->minGain >= 0)) {
+        return MA_INVALID_ARGS;
+    }
+
+    if (!ma_offline_spatializer_is_finite(pConfig->maxGain) || !(pConfig->maxGain >= pConfig->minGain)) {
+        return MA_INVALID_ARGS;
+    }
+
+    if (!ma_offline_spatializer_is_finite(pConfig->smoothingTimeInSeconds) || !(pConfig->smoothingTimeInSeconds >= 0)) {
+        return MA_INVALID_ARGS;
+    }
+
+    return MA_SUCCESS;
+}
+
+static ma_vec3f ma_offline_spatializer_calculate_listener_right(const ma_offline_spatializer* pSpatializer)
+{
+    ma_vec3f forward;
+    ma_vec3f up;
+    ma_vec3f right;
+    ma_vec3f fallbackUp;
+
+    MA_ASSERT(pSpatializer != NULL);
+
+    forward = ma_vec3f_normalize(pSpatializer->listenerForward);
+    if (ma_vec3f_len2(forward) == 0) {
+        if (pSpatializer->config.handedness == ma_handedness_right) {
+            forward = ma_vec3f_init_3f(0, 0, -1);
+        } else {
+            forward = ma_vec3f_init_3f(0, 0, 1);
+        }
+    }
+
+    up = ma_vec3f_normalize(pSpatializer->listenerUp);
+    if (pSpatializer->config.handedness == ma_handedness_right) {
+        right = ma_vec3f_cross(forward, up);
+    } else {
+        right = ma_vec3f_cross(up, forward);
+    }
+    right = ma_vec3f_normalize(right);
+
+    /*
+    A zero or parallel up vector makes the cross product degenerate. Pick an axis that is not
+    parallel with forward so the result is still a valid, stable right vector.
+    */
+    if (ma_vec3f_len2(right) == 0) {
+        if (ma_abs(forward.y) < 0.9f) {
+            fallbackUp = ma_vec3f_init_3f(0, 1, 0);
+        } else {
+            fallbackUp = ma_vec3f_init_3f(0, 0, 1);
+        }
+
+        if (pSpatializer->config.handedness == ma_handedness_right) {
+            right = ma_vec3f_normalize(ma_vec3f_cross(forward, fallbackUp));
+        } else {
+            right = ma_vec3f_normalize(ma_vec3f_cross(fallbackUp, forward));
+        }
+    }
+
+    if (ma_vec3f_len2(right) == 0) {
+        right = ma_vec3f_init_3f(1, 0, 0);
+    }
+
+    return right;
+}
+
+static float ma_offline_spatializer_calculate_distance_gain(const ma_offline_spatializer* pSpatializer, float distance)
+{
+    float gain;
+
+    MA_ASSERT(pSpatializer != NULL);
+
+    switch (pSpatializer->config.attenuationModel) {
+        case ma_attenuation_model_inverse:
+        {
+            gain = ma_attenuation_inverse(distance, pSpatializer->config.minDistance, pSpatializer->config.maxDistance, pSpatializer->config.rolloff);
+        } break;
+
+        case ma_attenuation_model_linear:
+        {
+            gain = ma_attenuation_linear(distance, pSpatializer->config.minDistance, pSpatializer->config.maxDistance, pSpatializer->config.rolloff);
+        } break;
+
+        case ma_attenuation_model_exponential:
+        {
+            gain = ma_attenuation_exponential(distance, pSpatializer->config.minDistance, pSpatializer->config.maxDistance, pSpatializer->config.rolloff);
+        } break;
+
+        case ma_attenuation_model_none:
+        default:
+        {
+            gain = 1;
+        } break;
+    }
+
+    return ma_clamp(gain, pSpatializer->config.minGain, pSpatializer->config.maxGain);
+}
+
+static void ma_offline_spatializer_calculate_channel_gains(float pan, float distanceGain, float* pLeft, float* pRight)
+{
+    float angle;
+
+    pan = ma_clamp(pan, -1.0f, 1.0f);
+
+    if (pan <= -0.999999f) {
+        *pLeft  = distanceGain;
+        *pRight = 0;
+        return;
+    }
+
+    if (pan >= 0.999999f) {
+        *pLeft  = 0;
+        *pRight = distanceGain;
+        return;
+    }
+
+    angle = (pan + 1.0f) * (MA_PI * 0.25f);
+    *pLeft  = ma_cosf(angle) * distanceGain;
+    *pRight = ma_sinf(angle) * distanceGain;
+}
+
+
+MA_API ma_offline_spatializer_config ma_offline_spatializer_config_init(ma_uint32 sampleRate)
+{
+    ma_offline_spatializer_config config;
+
+    MA_ZERO_OBJECT(&config);
+    config.sampleRate             = sampleRate;
+    config.attenuationModel       = ma_attenuation_model_inverse;
+    config.handedness             = ma_handedness_right;
+    config.minDistance            = 1;
+    config.maxDistance            = MA_FLT_MAX;
+    config.rolloff                = 1;
+    config.minGain                = 0;
+    config.maxGain                = 1;
+    config.smoothingTimeInSeconds = 0.01f;
+
+    return config;
+}
+
+MA_API ma_result ma_offline_spatializer_init(const ma_offline_spatializer_config* pConfig, ma_offline_spatializer* pSpatializer)
+{
+    ma_result result;
+    double smoothingFrameCount;
+
+    if (pSpatializer == NULL) {
+        return MA_INVALID_ARGS;
+    }
+
+    MA_ZERO_OBJECT(pSpatializer);
+
+    result = ma_offline_spatializer_validate_config(pConfig);
+    if (result != MA_SUCCESS) {
+        return result;
+    }
+
+    pSpatializer->config = *pConfig;
+    pSpatializer->listenerPosition = ma_vec3f_init_3f(0, 0, 0);
+    pSpatializer->sourcePosition   = ma_vec3f_init_3f(0, 0, 0);
+    pSpatializer->listenerUp       = ma_vec3f_init_3f(0, 1, 0);
+    if (pConfig->handedness == ma_handedness_right) {
+        pSpatializer->listenerForward = ma_vec3f_init_3f(0, 0, -1);
+    } else {
+        pSpatializer->listenerForward = ma_vec3f_init_3f(0, 0, 1);
+    }
+
+    pSpatializer->targetPan           = 0;
+    pSpatializer->currentPan          = 0;
+    pSpatializer->panStart            = 0;
+    pSpatializer->targetDistanceGain  = 1;
+    pSpatializer->currentDistanceGain = 1;
+    pSpatializer->distanceGainStart   = 1;
+
+    smoothingFrameCount = (double)pConfig->smoothingTimeInSeconds * pConfig->sampleRate;
+    if (smoothingFrameCount <= 0) {
+        pSpatializer->smoothingFrameCount = 0;
+    } else if (smoothingFrameCount >= (double)((ma_uint32)-1)) {
+        pSpatializer->smoothingFrameCount = (ma_uint32)-1;
+    } else {
+        pSpatializer->smoothingFrameCount = (ma_uint32)(smoothingFrameCount + 0.5);
+    }
+
+    return MA_SUCCESS;
+}
+
+MA_API void ma_offline_spatializer_uninit(ma_offline_spatializer* pSpatializer)
+{
+    if (pSpatializer == NULL) {
+        return;
+    }
+
+    MA_ZERO_OBJECT(pSpatializer);
+}
+
+MA_API ma_result ma_offline_spatializer_update(ma_offline_spatializer* pSpatializer, ma_vec3f sourcePosition, ma_vec3f listenerPosition, ma_vec3f listenerForward, ma_vec3f listenerUp)
+{
+    ma_vec3f relativePosition;
+    ma_vec3f listenerRight;
+    float distance;
+    float pan;
+
+    if (pSpatializer == NULL) {
+        return MA_INVALID_ARGS;
+    }
+
+    if (!ma_offline_spatializer_is_vec3f_finite(sourcePosition)   ||
+        !ma_offline_spatializer_is_vec3f_finite(listenerPosition) ||
+        !ma_offline_spatializer_is_vec3f_finite(listenerForward)  ||
+        !ma_offline_spatializer_is_vec3f_finite(listenerUp))
+    {
+        return MA_INVALID_ARGS;
+    }
+
+    pSpatializer->sourcePosition   = sourcePosition;
+    pSpatializer->listenerPosition = listenerPosition;
+    pSpatializer->listenerForward  = listenerForward;
+    pSpatializer->listenerUp       = listenerUp;
+
+    relativePosition = ma_vec3f_sub(sourcePosition, listenerPosition);
+    distance = ma_vec3f_len(relativePosition);
+    if (!(distance <= MA_FLT_MAX)) {
+        distance = MA_FLT_MAX;
+    }
+
+    if (distance > 0.000001f) {
+        listenerRight = ma_offline_spatializer_calculate_listener_right(pSpatializer);
+        pan = ma_vec3f_dot(relativePosition, listenerRight) / distance;
+        pan = ma_clamp(pan, -1.0f, 1.0f);
+    } else {
+        distance = 0;
+        pan = 0;
+    }
+
+    pSpatializer->distance            = distance;
+    pSpatializer->targetPan           = pan;
+    pSpatializer->targetDistanceGain  = ma_offline_spatializer_calculate_distance_gain(pSpatializer, distance);
+    pSpatializer->panStart            = pSpatializer->currentPan;
+    pSpatializer->distanceGainStart   = pSpatializer->currentDistanceGain;
+    pSpatializer->smoothingFrameCursor = 0;
+
+    if (pSpatializer->smoothingFrameCount == 0) {
+        pSpatializer->currentPan          = pSpatializer->targetPan;
+        pSpatializer->currentDistanceGain = pSpatializer->targetDistanceGain;
+    }
+
+    return MA_SUCCESS;
+}
+
+MA_API ma_result ma_offline_spatializer_process_pcm_frames(ma_offline_spatializer* pSpatializer, float* pFramesOut, const float* pFramesIn, ma_uint64 frameCount)
+{
+    ma_uint64 iFrame;
+    float left;
+    float right;
+
+    if (pSpatializer == NULL) {
+        return MA_INVALID_ARGS;
+    }
+
+    if (frameCount == 0) {
+        return MA_SUCCESS;
+    }
+
+    if (pFramesOut == NULL || pFramesIn == NULL) {
+        return MA_INVALID_ARGS;
+    }
+
+    for (iFrame = 0; iFrame < frameCount; iFrame += 1) {
+        if (pSpatializer->smoothingFrameCursor < pSpatializer->smoothingFrameCount) {
+            float t;
+
+            pSpatializer->smoothingFrameCursor += 1;
+            t = (float)pSpatializer->smoothingFrameCursor / (float)pSpatializer->smoothingFrameCount;
+
+            pSpatializer->currentPan = ma_mix_f32_fast(pSpatializer->panStart, pSpatializer->targetPan, t);
+            pSpatializer->currentDistanceGain = ma_mix_f32_fast(pSpatializer->distanceGainStart, pSpatializer->targetDistanceGain, t);
+        }
+
+        ma_offline_spatializer_calculate_channel_gains(pSpatializer->currentPan, pSpatializer->currentDistanceGain, &left, &right);
+
+        pFramesOut[iFrame * 2 + 0] = pFramesIn[iFrame] * left;
+        pFramesOut[iFrame * 2 + 1] = pFramesIn[iFrame] * right;
+    }
+
+    return MA_SUCCESS;
+}
+
+MA_API float ma_offline_spatializer_get_pan(const ma_offline_spatializer* pSpatializer)
+{
+    if (pSpatializer == NULL) {
+        return 0;
+    }
+
+    return pSpatializer->targetPan;
+}
+
+MA_API float ma_offline_spatializer_get_distance(const ma_offline_spatializer* pSpatializer)
+{
+    if (pSpatializer == NULL) {
+        return 0;
+    }
+
+    return pSpatializer->distance;
+}
+
+MA_API float ma_offline_spatializer_get_distance_gain(const ma_offline_spatializer* pSpatializer)
+{
+    if (pSpatializer == NULL) {
+        return 0;
+    }
+
+    return pSpatializer->targetDistanceGain;
+}
+
+MA_API ma_result ma_offline_spatializer_get_target_channel_gains(const ma_offline_spatializer* pSpatializer, float* pLeft, float* pRight)
+{
+    if (pSpatializer == NULL || pLeft == NULL || pRight == NULL) {
+        return MA_INVALID_ARGS;
+    }
+
+    ma_offline_spatializer_calculate_channel_gains(pSpatializer->targetPan, pSpatializer->targetDistanceGain, pLeft, pRight);
+
+    return MA_SUCCESS;
+}
+
+MA_API ma_result ma_offline_spatializer_get_current_channel_gains(const ma_offline_spatializer* pSpatializer, float* pLeft, float* pRight)
+{
+    if (pSpatializer == NULL || pLeft == NULL || pRight == NULL) {
+        return MA_INVALID_ARGS;
+    }
+
+    ma_offline_spatializer_calculate_channel_gains(pSpatializer->currentPan, pSpatializer->currentDistanceGain, pLeft, pRight);
+
+    return MA_SUCCESS;
 }
 
 
