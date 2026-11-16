@@ -1,0 +1,1894 @@
+[crash] crashes/crash_001_tone.wav_trunc@40349mem
+
+=================================================================
+==3678766==ERROR: LeakSanitizer: detected memory leaks
+
+Direct leak of 36238 byte(s) in 1 object(s) allocated from:
+    #0 0x7f46b332b60f in malloc ../../../../src/libsanitizer/asan/asan_malloc_linux.cpp:67
+    #1 0x5b7e3ba7fe1f in main /home/cat/gsb/uid4005/hardening/ma_decode_harness.c:62
+
+SUMMARY: AddressSanitizer: 36238 byte(s) leaked in 1 allocation(s).
+
+[crash] crashes/crash_002_tone.wav_trunc@121561mem
+
+=================================================================
+==3680183==ERROR: LeakSanitizer: detected memory leaks
+
+Direct leak of 121562 byte(s) in 1 object(s) allocated from:
+    #0 0x70c8e472b60f in malloc ../../../../src/libsanitizer/asan/asan_malloc_linux.cpp:67
+    #1 0x603a2d717e1f in main /home/cat/gsb/uid4005/hardening/ma_decode_harness.c:62
+
+SUMMARY: AddressSanitizer: 121562 byte(s) leaked in 1 allocation(s).
+
+[crash] crashes/crash_003_tone.wav_trunc@124902mem
+
+=================================================================
+==3680029==ERROR: LeakSanitizer: detected memory leaks
+
+Direct leak of 124903 byte(s) in 1 object(s) allocated from:
+    #0 0x770696d2b60f in malloc ../../../../src/libsanitizer/asan/asan_malloc_linux.cpp:67
+    #1 0x58fcc44d2e1f in main /home/cat/gsb/uid4005/hardening/ma_decode_harness.c:62
+
+SUMMARY: AddressSanitizer: 124903 byte(s) leaked in 1 allocation(s).
+
+[crash] crashes/crash_004_tone.wav_trunc@141350mem
+
+=================================================================
+==3680737==ERROR: LeakSanitizer: detected memory leaks
+
+Direct leak of 141351 byte(s) in 1 object(s) allocated from:
+    #0 0x7fc79bd2b60f in malloc ../../../../src/libsanitizer/asan/asan_malloc_linux.cpp:67
+    #1 0x5576487d2e1f in main /home/cat/gsb/uid4005/hardening/ma_decode_harness.c:62
+
+SUMMARY: AddressSanitizer: 141351 byte(s) leaked in 1 allocation(s).
+
+[crash] crashes/crash_005_tone.wav_trunc@149317mem
+
+=================================================================
+==3680779==ERROR: LeakSanitizer: detected memory leaks
+
+Direct leak of 149318 byte(s) in 1 object(s) allocated from:
+    #0 0x72221112b60f in malloc ../../../../src/libsanitizer/asan/asan_malloc_linux.cpp:67
+    #1 0x62f690243e1f in main /home/cat/gsb/uid4005/hardening/ma_decode_harness.c:62
+
+SUMMARY: AddressSanitizer: 149318 byte(s) leaked in 1 allocation(s).
+
+[crash] crashes/crash_006_tone.wav_trunc@154200mem
+
+=================================================================
+==3680918==ERROR: LeakSanitizer: detected memory leaks
+
+Direct leak of 162425 byte(s) in 1 object(s) allocated from:
+    #0 0x713f2412b60f in malloc ../../../../src/libsanitizer/asan/asan_malloc_linux.cpp:67
+    #1 0x60913292ee1f in main /home/cat/gsb/uid4005/hardening/ma_decode_harness.c:62
+
+SUMMARY: AddressSanitizer: 162425 byte(s) leaked in 1 allocation(s).
+
+[crash] crashes/crash_007_tone.mp3_trunc@2056mem
+
+=================================================================
+==3681692==ERROR: LeakSanitizer: detected memory leaks
+
+Direct leak of 176425 byte(s) in 1 object(s) allocated from:
+    #0 0x788d16d2b60f in malloc ../../../../src/libsanitizer/asan/asan_malloc_linux.cpp:67
+    #1 0x60f6de905e1f in main /home/cat/gsb/uid4005/hardening/ma_decode_harness.c:62
+
+SUMMARY: AddressSanitizer: 176425 byte(s) leaked in 1 allocation(s).
+
+[crash] crashes/crash_008_tone.flac_trunc@20595mem
+
+=================================================================
+==3683239==ERROR: LeakSanitizer: detected memory leaks
+
+Direct leak of 20596 byte(s) in 1 object(s) allocated from:
+    #0 0x7fa88e92b60f in malloc ../../../../src/libsanitizer/asan/asan_malloc_linux.cpp:67
+    #1 0x63f792030e1f in main /home/cat/gsb/uid4005/hardening/ma_decode_harness.c:62
+
+SUMMARY: AddressSanitizer: 20596 byte(s) leaked in 1 allocation(s).
+
+[crash] crashes/crash_009_sample.flac_trunc@58853mem
+
+=================================================================
+==3684882==ERROR: LeakSanitizer: detected memory leaks
+
+Direct leak of 65022 byte(s) in 1 object(s) allocated from:
+    #0 0x7554ee92b60f in malloc ../../../../src/libsanitizer/asan/asan_malloc_linux.cpp:67
+    #1 0x5bd9bf5d6e1f in main /home/cat/gsb/uid4005/hardening/ma_decode_harness.c:62
+
+SUMMARY: AddressSanitizer: 65022 byte(s) leaked in 1 allocation(s).
+
+[crash] crashes/crash_010_sample.flac_trunc@125159mem
+
+=================================================================
+==3686523==ERROR: LeakSanitizer: detected memory leaks
+
+Direct leak of 131328 byte(s) in 1 object(s) allocated from:
+    #0 0x791a8512b60f in malloc ../../../../src/libsanitizer/asan/asan_malloc_linux.cpp:67
+    #1 0x556b60197e1f in main /home/cat/gsb/uid4005/hardening/ma_decode_harness.c:62
+
+SUMMARY: AddressSanitizer: 131328 byte(s) leaked in 1 allocation(s).
+
+[crash] crashes/crash_011_sample.flac_trunc@382159mem
+
+=================================================================
+==3692338==ERROR: LeakSanitizer: detected memory leaks
+
+Direct leak of 386272 byte(s) in 1 object(s) allocated from:
+    #0 0x7f465512b60f in malloc ../../../../src/libsanitizer/asan/asan_malloc_linux.cpp:67
+    #1 0x578f50484e1f in main /home/cat/gsb/uid4005/hardening/ma_decode_harness.c:62
+
+SUMMARY: AddressSanitizer: 386272 byte(s) leaked in 1 allocation(s).
+
+[crash] crashes/crash_012_sample.flac_trunc@547153mem
+
+=================================================================
+==3696281==ERROR: LeakSanitizer: detected memory leaks
+
+Direct leak of 547154 byte(s) in 1 object(s) allocated from:
+    #0 0x798de392b60f in malloc ../../../../src/libsanitizer/asan/asan_malloc_linux.cpp:67
+    #1 0x5cecff640e1f in main /home/cat/gsb/uid4005/hardening/ma_decode_harness.c:62
+
+SUMMARY: AddressSanitizer: 547154 byte(s) leaked in 1 allocation(s).
+
+[crash] crashes/crash_013_sample.flac_trunc@639159mem
+
+=================================================================
+==3698952==ERROR: LeakSanitizer: detected memory leaks
+
+Direct leak of 639160 byte(s) in 1 object(s) allocated from:
+    #0 0x7dd286b2b60f in malloc ../../../../src/libsanitizer/asan/asan_malloc_linux.cpp:67
+    #1 0x5b358892ee1f in main /home/cat/gsb/uid4005/hardening/ma_decode_harness.c:62
+
+SUMMARY: AddressSanitizer: 639160 byte(s) leaked in 1 allocation(s).
+
+[crash] crashes/crash_014_sample.flac_trunc@654322mem
+
+=================================================================
+==3698883==ERROR: LeakSanitizer: detected memory leaks
+
+Direct leak of 654323 byte(s) in 1 object(s) allocated from:
+    #0 0x779e3af2b60f in malloc ../../../../src/libsanitizer/asan/asan_malloc_linux.cpp:67
+    #1 0x60fcede8ce1f in main /home/cat/gsb/uid4005/hardening/ma_decode_harness.c:62
+
+SUMMARY: AddressSanitizer: 654323 byte(s) leaked in 1 allocation(s).
+
+[crash] crashes/crash_015_sample.flac_trunc@710091mem
+
+=================================================================
+==3700694==ERROR: LeakSanitizer: detected memory leaks
+
+Direct leak of 710092 byte(s) in 1 object(s) allocated from:
+    #0 0x7d36a9d2b60f in malloc ../../../../src/libsanitizer/asan/asan_malloc_linux.cpp:67
+    #1 0x580fce0c1e1f in main /home/cat/gsb/uid4005/hardening/ma_decode_harness.c:62
+
+SUMMARY: AddressSanitizer: 710092 byte(s) leaked in 1 allocation(s).
+
+[crash] crashes/crash_016_sample.flac_trunc@768944mem
+
+=================================================================
+==3701685==ERROR: LeakSanitizer: detected memory leaks
+
+Direct leak of 768945 byte(s) in 1 object(s) allocated from:
+    #0 0x73084492b60f in malloc ../../../../src/libsanitizer/asan/asan_malloc_linux.cpp:67
+    #1 0x615e3ac70e1f in main /home/cat/gsb/uid4005/hardening/ma_decode_harness.c:62
+
+SUMMARY: AddressSanitizer: 768945 byte(s) leaked in 1 allocation(s).
+
+[crash] crashes/crash_017_sample.flac_trunc@869431mem
+
+=================================================================
+==3704407==ERROR: LeakSanitizer: detected memory leaks
+
+Direct leak of 869432 byte(s) in 1 object(s) allocated from:
+    #0 0x7070f4b2b60f in malloc ../../../../src/libsanitizer/asan/asan_malloc_linux.cpp:67
+    #1 0x5be7db328e1f in main /home/cat/gsb/uid4005/hardening/ma_decode_harness.c:62
+
+SUMMARY: AddressSanitizer: 869432 byte(s) leaked in 1 allocation(s).
+
+[crash] crashes/crash_018_sample.flac_trunc@933424mem
+
+=================================================================
+==3705604==ERROR: LeakSanitizer: detected memory leaks
+
+Direct leak of 933425 byte(s) in 1 object(s) allocated from:
+    #0 0x7a9fae32b60f in malloc ../../../../src/libsanitizer/asan/asan_malloc_linux.cpp:67
+    #1 0x580b2b739e1f in main /home/cat/gsb/uid4005/hardening/ma_decode_harness.c:62
+
+SUMMARY: AddressSanitizer: 933425 byte(s) leaked in 1 allocation(s).
+
+[crash] crashes/crash_019_sample.flac_trunc@1100731mem
+
+=================================================================
+==3713448==ERROR: LeakSanitizer: detected memory leaks
+
+Direct leak of 1100732 byte(s) in 1 object(s) allocated from:
+    #0 0x7155a592b60f in malloc ../../../../src/libsanitizer/asan/asan_malloc_linux.cpp:67
+    #1 0x6086f3a97e1f in main /home/cat/gsb/uid4005/hardening/ma_decode_harness.c:62
+
+SUMMARY: AddressSanitizer: 1100732 byte(s) leaked in 1 allocation(s).
+
+[crash] crashes/crash_020_sample.flac_trunc@1173976mem
+
+=================================================================
+==3715003==ERROR: LeakSanitizer: detected memory leaks
+
+Direct leak of 1173977 byte(s) in 1 object(s) allocated from:
+    #0 0x7eb98652b60f in malloc ../../../../src/libsanitizer/asan/asan_malloc_linux.cpp:67
+    #1 0x55f3ec786e1f in main /home/cat/gsb/uid4005/hardening/ma_decode_harness.c:62
+
+SUMMARY: AddressSanitizer: 1173977 byte(s) leaked in 1 allocation(s).
+
+[crash] crashes/crash_021_sample.flac_trunc@1291168mem
+
+=================================================================
+==3717634==ERROR: LeakSanitizer: detected memory leaks
+
+Direct leak of 1291169 byte(s) in 1 object(s) allocated from:
+    #0 0x75a03232b60f in malloc ../../../../src/libsanitizer/asan/asan_malloc_linux.cpp:67
+    #1 0x62e4ab654e1f in main /home/cat/gsb/uid4005/hardening/ma_decode_harness.c:62
+
+SUMMARY: AddressSanitizer: 1291169 byte(s) leaked in 1 allocation(s).
+
+[crash] crashes/crash_022_sample.flac_trunc@1302733mem
+
+=================================================================
+==3717643==ERROR: LeakSanitizer: detected memory leaks
+
+Direct leak of 1302734 byte(s) in 1 object(s) allocated from:
+    #0 0x7269a332b60f in malloc ../../../../src/libsanitizer/asan/asan_malloc_linux.cpp:67
+    #1 0x605b0184ce1f in main /home/cat/gsb/uid4005/hardening/ma_decode_harness.c:62
+
+SUMMARY: AddressSanitizer: 1302734 byte(s) leaked in 1 allocation(s).
+
+[crash] crashes/crash_023_sample.flac_trunc@1306074mem
+
+=================================================================
+==3718237==ERROR: LeakSanitizer: detected memory leaks
+
+Direct leak of 1306075 byte(s) in 1 object(s) allocated from:
+    #0 0x77e02932b60f in malloc ../../../../src/libsanitizer/asan/asan_malloc_linux.cpp:67
+    #1 0x56546f4bfe1f in main /home/cat/gsb/uid4005/hardening/ma_decode_harness.c:62
+
+SUMMARY: AddressSanitizer: 1306075 byte(s) leaked in 1 allocation(s).
+
+[crash] crashes/crash_024_sample.flac_trunc@1403477mem
+
+=================================================================
+==3720369==ERROR: LeakSanitizer: detected memory leaks
+
+Direct leak of 1403478 byte(s) in 1 object(s) allocated from:
+    #0 0x7d59fed2b60f in malloc ../../../../src/libsanitizer/asan/asan_malloc_linux.cpp:67
+    #1 0x581851c30e1f in main /home/cat/gsb/uid4005/hardening/ma_decode_harness.c:62
+
+SUMMARY: AddressSanitizer: 1403478 byte(s) leaked in 1 allocation(s).
+
+[crash] crashes/crash_025_sample.flac_trunc@1404248mem
+
+=================================================================
+==3720509==ERROR: LeakSanitizer: detected memory leaks
+
+Direct leak of 1404249 byte(s) in 1 object(s) allocated from:
+    #0 0x7f5599b2b60f in malloc ../../../../src/libsanitizer/asan/asan_malloc_linux.cpp:67
+    #1 0x62d1c7fd6e1f in main /home/cat/gsb/uid4005/hardening/ma_decode_harness.c:62
+
+SUMMARY: AddressSanitizer: 1404249 byte(s) leaked in 1 allocation(s).
+
+[crash] crashes/crash_026_sample.flac_trunc@1436887mem
+
+=================================================================
+==3721245==ERROR: LeakSanitizer: detected memory leaks
+
+Direct leak of 1436888 byte(s) in 1 object(s) allocated from:
+    #0 0x7ee3f252b60f in malloc ../../../../src/libsanitizer/asan/asan_malloc_linux.cpp:67
+    #1 0x5dd7e1f0fe1f in main /home/cat/gsb/uid4005/hardening/ma_decode_harness.c:62
+
+SUMMARY: AddressSanitizer: 1436888 byte(s) leaked in 1 allocation(s).
+
+[crash] crashes/crash_027_sample.flac_trunc@1438943mem
+
+=================================================================
+==3720879==ERROR: LeakSanitizer: detected memory leaks
+
+Direct leak of 1438944 byte(s) in 1 object(s) allocated from:
+    #0 0x76069612b60f in malloc ../../../../src/libsanitizer/asan/asan_malloc_linux.cpp:67
+    #1 0x621eb79e0e1f in main /home/cat/gsb/uid4005/hardening/ma_decode_harness.c:62
+
+SUMMARY: AddressSanitizer: 1438944 byte(s) leaked in 1 allocation(s).
+
+[crash] crashes/crash_028_sample.flac_trunc@1460531mem
+
+=================================================================
+==3721796==ERROR: LeakSanitizer: detected memory leaks
+
+Direct leak of 1460532 byte(s) in 1 object(s) allocated from:
+    #0 0x702cea72b60f in malloc ../../../../src/libsanitizer/asan/asan_malloc_linux.cpp:67
+    #1 0x56c082569e1f in main /home/cat/gsb/uid4005/hardening/ma_decode_harness.c:62
+
+SUMMARY: AddressSanitizer: 1460532 byte(s) leaked in 1 allocation(s).
+
+[crash] crashes/crash_029_sample.flac_trunc@1468241mem
+
+=================================================================
+==3721765==ERROR: LeakSanitizer: detected memory leaks
+
+Direct leak of 1468242 byte(s) in 1 object(s) allocated from:
+    #0 0x7bc8cb72b60f in malloc ../../../../src/libsanitizer/asan/asan_malloc_linux.cpp:67
+    #1 0x564ae0634e1f in main /home/cat/gsb/uid4005/hardening/ma_decode_harness.c:62
+
+SUMMARY: AddressSanitizer: 1468242 byte(s) leaked in 1 allocation(s).
+
+[crash] crashes/crash_030_sample.flac_trunc@1479806mem
+
+=================================================================
+==3722103==ERROR: LeakSanitizer: detected memory leaks
+
+Direct leak of 1479807 byte(s) in 1 object(s) allocated from:
+    #0 0x76c1bfd2b60f in malloc ../../../../src/libsanitizer/asan/asan_malloc_linux.cpp:67
+    #1 0x5cbebfe12e1f in main /home/cat/gsb/uid4005/hardening/ma_decode_harness.c:62
+
+SUMMARY: AddressSanitizer: 1479807 byte(s) leaked in 1 allocation(s).
+
+[crash] crashes/crash_031_sample.flac_trunc@1495740mem
+
+=================================================================
+==3723084==ERROR: LeakSanitizer: detected memory leaks
+
+Direct leak of 1495741 byte(s) in 1 object(s) allocated from:
+    #0 0x74136cb2b60f in malloc ../../../../src/libsanitizer/asan/asan_malloc_linux.cpp:67
+    #1 0x5731b50cae1f in main /home/cat/gsb/uid4005/hardening/ma_decode_harness.c:62
+
+SUMMARY: AddressSanitizer: 1495741 byte(s) leaked in 1 allocation(s).
+
+[crash] crashes/crash_032_sample.flac_trunc@1501394mem
+
+=================================================================
+==3722685==ERROR: LeakSanitizer: detected memory leaks
+
+Direct leak of 1501395 byte(s) in 1 object(s) allocated from:
+    #0 0x77966192b60f in malloc ../../../../src/libsanitizer/asan/asan_malloc_linux.cpp:67
+    #1 0x5cac4f249e1f in main /home/cat/gsb/uid4005/hardening/ma_decode_harness.c:62
+
+SUMMARY: AddressSanitizer: 1501395 byte(s) leaked in 1 allocation(s).
+
+[crash] crashes/crash_033_sample.flac_trunc@1504478mem
+
+=================================================================
+==3722530==ERROR: LeakSanitizer: detected memory leaks
+
+Direct leak of 1504479 byte(s) in 1 object(s) allocated from:
+    #0 0x7142d032b60f in malloc ../../../../src/libsanitizer/asan/asan_malloc_linux.cpp:67
+    #1 0x597c72b4fe1f in main /home/cat/gsb/uid4005/hardening/ma_decode_harness.c:62
+
+SUMMARY: AddressSanitizer: 1504479 byte(s) leaked in 1 allocation(s).
+
+[crash] crashes/crash_034_sample.flac_trunc@1622955mem
+
+=================================================================
+==3726329==ERROR: LeakSanitizer: detected memory leaks
+
+Direct leak of 1622956 byte(s) in 1 object(s) allocated from:
+    #0 0x7741b752b60f in malloc ../../../../src/libsanitizer/asan/asan_malloc_linux.cpp:67
+    #1 0x5b0dc2935e1f in main /home/cat/gsb/uid4005/hardening/ma_decode_harness.c:62
+
+SUMMARY: AddressSanitizer: 1622956 byte(s) leaked in 1 allocation(s).
+
+[crash] crashes/crash_035_sample.flac_trunc@1722671mem
+
+=================================================================
+==3728163==ERROR: LeakSanitizer: detected memory leaks
+
+Direct leak of 1722672 byte(s) in 1 object(s) allocated from:
+    #0 0x73b883d2b60f in malloc ../../../../src/libsanitizer/asan/asan_malloc_linux.cpp:67
+    #1 0x6089680f6e1f in main /home/cat/gsb/uid4005/hardening/ma_decode_harness.c:62
+
+SUMMARY: AddressSanitizer: 1722672 byte(s) leaked in 1 allocation(s).
+
+[crash] crashes/crash_036_sample.flac_trunc@1755824mem
+
+=================================================================
+==3729008==ERROR: LeakSanitizer: detected memory leaks
+
+Direct leak of 1755825 byte(s) in 1 object(s) allocated from:
+    #0 0x7227d0f2b60f in malloc ../../../../src/libsanitizer/asan/asan_malloc_linux.cpp:67
+    #1 0x5a8b785c5e1f in main /home/cat/gsb/uid4005/hardening/ma_decode_harness.c:62
+
+SUMMARY: AddressSanitizer: 1755825 byte(s) leaked in 1 allocation(s).
+
+[crash] crashes/crash_037_sample.flac_trunc@1798017mem
+
+=================================================================
+==3730158==ERROR: LeakSanitizer: detected memory leaks
+
+Direct leak of 1798018 byte(s) in 1 object(s) allocated from:
+    #0 0x7a86d792b60f in malloc ../../../../src/libsanitizer/asan/asan_malloc_linux.cpp:67
+    #1 0x64f986459e1f in main /home/cat/gsb/uid4005/hardening/ma_decode_harness.c:62
+
+SUMMARY: AddressSanitizer: 1798018 byte(s) leaked in 1 allocation(s).
+
+[crash] crashes/crash_038_tone.flac_truncflip_102mem
+
+=================================================================
+==3730888==ERROR: LeakSanitizer: detected memory leaks
+
+Direct leak of 9890 byte(s) in 1 object(s) allocated from:
+    #0 0x742bef92b60f in malloc ../../../../src/libsanitizer/asan/asan_malloc_linux.cpp:67
+    #1 0x63b56d8d4e1f in main /home/cat/gsb/uid4005/hardening/ma_decode_harness.c:62
+
+SUMMARY: AddressSanitizer: 9890 byte(s) leaked in 1 allocation(s).
+
+[crash] crashes/crash_039_sample.flac_flachdr_155mem
+
+=================================================================
+==3731870==ERROR: LeakSanitizer: detected memory leaks
+
+Direct leak of 1798052 byte(s) in 1 object(s) allocated from:
+    #0 0x795991b2b60f in malloc ../../../../src/libsanitizer/asan/asan_malloc_linux.cpp:67
+    #1 0x5d1ce07ebe1f in main /home/cat/gsb/uid4005/hardening/ma_decode_harness.c:62
+
+SUMMARY: AddressSanitizer: 1798052 byte(s) leaked in 1 allocation(s).
+
+[crash] crashes/crash_040_tone.wav_hdrstorm_256mem
+
+=================================================================
+==3732036==ERROR: LeakSanitizer: detected memory leaks
+
+Direct leak of 176479 byte(s) in 1 object(s) allocated from:
+    #0 0x7edc78b2b60f in malloc ../../../../src/libsanitizer/asan/asan_malloc_linux.cpp:67
+    #1 0x55ba7f77ee1f in main /home/cat/gsb/uid4005/hardening/ma_decode_harness.c:62
+
+SUMMARY: AddressSanitizer: 176479 byte(s) leaked in 1 allocation(s).
+
+[crash] crashes/crash_041_sample.flac_flachdr_271mem
+
+=================================================================
+==3732758==ERROR: LeakSanitizer: detected memory leaks
+
+Direct leak of 1798052 byte(s) in 1 object(s) allocated from:
+    #0 0x766db772b60f in malloc ../../../../src/libsanitizer/asan/asan_malloc_linux.cpp:67
+    #1 0x580fc1c96e1f in main /home/cat/gsb/uid4005/hardening/ma_decode_harness.c:62
+
+SUMMARY: AddressSanitizer: 1798052 byte(s) leaked in 1 allocation(s).
+
+[crash] crashes/crash_042_tone.mp3_flip_469mem
+
+=================================================================
+==3733315==ERROR: LeakSanitizer: detected memory leaks
+
+Direct leak of 17180 byte(s) in 1 object(s) allocated from:
+    #0 0x750f5b52b60f in malloc ../../../../src/libsanitizer/asan/asan_malloc_linux.cpp:67
+    #1 0x648cdad6ae1f in main /home/cat/gsb/uid4005/hardening/ma_decode_harness.c:62
+
+SUMMARY: AddressSanitizer: 17180 byte(s) leaked in 1 allocation(s).
+
+[crash] crashes/crash_043_sample.flac_flachdr_515mem
+
+=================================================================
+==3733819==ERROR: LeakSanitizer: detected memory leaks
+
+Direct leak of 1798052 byte(s) in 1 object(s) allocated from:
+    #0 0x712584b2b60f in malloc ../../../../src/libsanitizer/asan/asan_malloc_linux.cpp:67
+    #1 0x64533c6a6e1f in main /home/cat/gsb/uid4005/hardening/ma_decode_harness.c:62
+
+SUMMARY: AddressSanitizer: 1798052 byte(s) leaked in 1 allocation(s).
+
+[crash] crashes/crash_044_sample.flac_flachdr_523mem
+
+=================================================================
+==3734183==ERROR: LeakSanitizer: detected memory leaks
+
+Direct leak of 1798052 byte(s) in 1 object(s) allocated from:
+    #0 0x712e1f12b60f in malloc ../../../../src/libsanitizer/asan/asan_malloc_linux.cpp:67
+    #1 0x606f7dc48e1f in main /home/cat/gsb/uid4005/hardening/ma_decode_harness.c:62
+
+SUMMARY: AddressSanitizer: 1798052 byte(s) leaked in 1 allocation(s).
+
+[crash] crashes/crash_045_sample.flac_flachdr_603mem
+
+=================================================================
+==3734228==ERROR: LeakSanitizer: detected memory leaks
+
+Direct leak of 1798052 byte(s) in 1 object(s) allocated from:
+    #0 0x7a9f71d2b60f in malloc ../../../../src/libsanitizer/asan/asan_malloc_linux.cpp:67
+    #1 0x599a350cde1f in main /home/cat/gsb/uid4005/hardening/ma_decode_harness.c:62
+
+SUMMARY: AddressSanitizer: 1798052 byte(s) leaked in 1 allocation(s).
+
+[crash] crashes/crash_046_sample.flac_flachdr_643mem
+
+=================================================================
+==3734521==ERROR: LeakSanitizer: detected memory leaks
+
+Direct leak of 1798052 byte(s) in 1 object(s) allocated from:
+    #0 0x72b92c72b60f in malloc ../../../../src/libsanitizer/asan/asan_malloc_linux.cpp:67
+    #1 0x5d902494ee1f in main /home/cat/gsb/uid4005/hardening/ma_decode_harness.c:62
+
+SUMMARY: AddressSanitizer: 1798052 byte(s) leaked in 1 allocation(s).
+
+[crash] crashes/crash_047_sample.flac_flachdr_655mem
+
+=================================================================
+==3734983==ERROR: LeakSanitizer: detected memory leaks
+
+Direct leak of 1798052 byte(s) in 1 object(s) allocated from:
+    #0 0x7a060552b60f in malloc ../../../../src/libsanitizer/asan/asan_malloc_linux.cpp:67
+    #1 0x61edd872de1f in main /home/cat/gsb/uid4005/hardening/ma_decode_harness.c:62
+
+SUMMARY: AddressSanitizer: 1798052 byte(s) leaked in 1 allocation(s).
+
+[crash] crashes/crash_048_sample.flac_flachdr_891mem
+
+=================================================================
+==3735935==ERROR: LeakSanitizer: detected memory leaks
+
+Direct leak of 1798052 byte(s) in 1 object(s) allocated from:
+    #0 0x729f7cf2b60f in malloc ../../../../src/libsanitizer/asan/asan_malloc_linux.cpp:67
+    #1 0x6120a28ede1f in main /home/cat/gsb/uid4005/hardening/ma_decode_harness.c:62
+
+SUMMARY: AddressSanitizer: 1798052 byte(s) leaked in 1 allocation(s).
+
+[crash] crashes/crash_049_sample.flac_flachdr_939mem
+
+=================================================================
+==3736324==ERROR: LeakSanitizer: detected memory leaks
+
+Direct leak of 1798052 byte(s) in 1 object(s) allocated from:
+    #0 0x799642d2b60f in malloc ../../../../src/libsanitizer/asan/asan_malloc_linux.cpp:67
+    #1 0x5f6ff38abe1f in main /home/cat/gsb/uid4005/hardening/ma_decode_harness.c:62
+
+SUMMARY: AddressSanitizer: 1798052 byte(s) leaked in 1 allocation(s).
+
+[crash] crashes/crash_050_sample.flac_flachdr_907mem
+
+=================================================================
+==3736341==ERROR: LeakSanitizer: detected memory leaks
+
+Direct leak of 1798052 byte(s) in 1 object(s) allocated from:
+    #0 0x73d788d2b60f in malloc ../../../../src/libsanitizer/asan/asan_malloc_linux.cpp:67
+    #1 0x5e24b1c96e1f in main /home/cat/gsb/uid4005/hardening/ma_decode_harness.c:62
+
+SUMMARY: AddressSanitizer: 1798052 byte(s) leaked in 1 allocation(s).
+
+[crash] crashes/crash_051_sample.flac_flachdr_919mem
+
+=================================================================
+==3736135==ERROR: LeakSanitizer: detected memory leaks
+
+Direct leak of 1798052 byte(s) in 1 object(s) allocated from:
+    #0 0x75971332b60f in malloc ../../../../src/libsanitizer/asan/asan_malloc_linux.cpp:67
+    #1 0x58027e44fe1f in main /home/cat/gsb/uid4005/hardening/ma_decode_harness.c:62
+
+SUMMARY: AddressSanitizer: 1798052 byte(s) leaked in 1 allocation(s).
+
+[crash] crashes/crash_052_sample.flac_flachdr_927mem
+
+=================================================================
+==3736504==ERROR: LeakSanitizer: detected memory leaks
+
+Direct leak of 1798052 byte(s) in 1 object(s) allocated from:
+    #0 0x72337452b60f in malloc ../../../../src/libsanitizer/asan/asan_malloc_linux.cpp:67
+    #1 0x63f124c52e1f in main /home/cat/gsb/uid4005/hardening/ma_decode_harness.c:62
+
+SUMMARY: AddressSanitizer: 1798052 byte(s) leaked in 1 allocation(s).
+
+[crash] crashes/crash_053_sample.flac_flachdr_947mem
+
+=================================================================
+==3736281==ERROR: LeakSanitizer: detected memory leaks
+
+Direct leak of 1798052 byte(s) in 1 object(s) allocated from:
+    #0 0x79383e92b60f in malloc ../../../../src/libsanitizer/asan/asan_malloc_linux.cpp:67
+    #1 0x6099842e0e1f in main /home/cat/gsb/uid4005/hardening/ma_decode_harness.c:62
+
+SUMMARY: AddressSanitizer: 1798052 byte(s) leaked in 1 allocation(s).
+
+[crash] crashes/crash_054_sample.flac_flachdr_951mem
+
+=================================================================
+==3736505==ERROR: LeakSanitizer: detected memory leaks
+
+Direct leak of 1798052 byte(s) in 1 object(s) allocated from:
+    #0 0x745ccab2b60f in malloc ../../../../src/libsanitizer/asan/asan_malloc_linux.cpp:67
+    #1 0x5b5ccc8e9e1f in main /home/cat/gsb/uid4005/hardening/ma_decode_harness.c:62
+
+SUMMARY: AddressSanitizer: 1798052 byte(s) leaked in 1 allocation(s).
+
+[crash] crashes/crash_055_sample.flac_flachdr_1087mem
+
+=================================================================
+==3737486==ERROR: LeakSanitizer: detected memory leaks
+
+Direct leak of 1798052 byte(s) in 1 object(s) allocated from:
+    #0 0x7232cb92b60f in malloc ../../../../src/libsanitizer/asan/asan_malloc_linux.cpp:67
+    #1 0x624203b43e1f in main /home/cat/gsb/uid4005/hardening/ma_decode_harness.c:62
+
+SUMMARY: AddressSanitizer: 1798052 byte(s) leaked in 1 allocation(s).
+
+[crash] crashes/crash_056_tone.flac_truncflip_1150mem
+
+=================================================================
+==3737688==ERROR: LeakSanitizer: detected memory leaks
+
+Direct leak of 19507 byte(s) in 1 object(s) allocated from:
+    #0 0x75c5b412b60f in malloc ../../../../src/libsanitizer/asan/asan_malloc_linux.cpp:67
+    #1 0x5902c7b9ce1f in main /home/cat/gsb/uid4005/hardening/ma_decode_harness.c:62
+
+SUMMARY: AddressSanitizer: 19507 byte(s) leaked in 1 allocation(s).
+
+[crash] crashes/crash_057_tone.flac_truncflip_1258mem
+
+=================================================================
+==3738180==ERROR: LeakSanitizer: detected memory leaks
+
+Direct leak of 9596 byte(s) in 1 object(s) allocated from:
+    #0 0x756f43b2b60f in malloc ../../../../src/libsanitizer/asan/asan_malloc_linux.cpp:67
+    #1 0x58e3c26a2e1f in main /home/cat/gsb/uid4005/hardening/ma_decode_harness.c:62
+
+SUMMARY: AddressSanitizer: 9596 byte(s) leaked in 1 allocation(s).
+
+[crash] crashes/crash_058_sample.flac_flachdr_1287mem
+
+=================================================================
+==3738451==ERROR: LeakSanitizer: detected memory leaks
+
+Direct leak of 1798052 byte(s) in 1 object(s) allocated from:
+    #0 0x76b534d2b60f in malloc ../../../../src/libsanitizer/asan/asan_malloc_linux.cpp:67
+    #1 0x592109c4ce1f in main /home/cat/gsb/uid4005/hardening/ma_decode_harness.c:62
+
+SUMMARY: AddressSanitizer: 1798052 byte(s) leaked in 1 allocation(s).
+
+[crash] crashes/crash_059_sample.flac_flachdr_1539mem
+
+=================================================================
+==3740030==ERROR: LeakSanitizer: detected memory leaks
+
+Direct leak of 1798052 byte(s) in 1 object(s) allocated from:
+    #0 0x7918d132b60f in malloc ../../../../src/libsanitizer/asan/asan_malloc_linux.cpp:67
+    #1 0x5acc42e15e1f in main /home/cat/gsb/uid4005/hardening/ma_decode_harness.c:62
+
+SUMMARY: AddressSanitizer: 1798052 byte(s) leaked in 1 allocation(s).
+
+[crash] crashes/crash_060_tone.mp3_flip_1545mem
+
+=================================================================
+==3740351==ERROR: LeakSanitizer: detected memory leaks
+
+Direct leak of 17180 byte(s) in 1 object(s) allocated from:
+    #0 0x7152c812b60f in malloc ../../../../src/libsanitizer/asan/asan_malloc_linux.cpp:67
+    #1 0x5a99fa6f9e1f in main /home/cat/gsb/uid4005/hardening/ma_decode_harness.c:62
+
+SUMMARY: AddressSanitizer: 17180 byte(s) leaked in 1 allocation(s).
+
+[crash] crashes/crash_061_sample.flac_flachdr_1587mem
+
+=================================================================
+==3740082==ERROR: LeakSanitizer: detected memory leaks
+
+Direct leak of 1798052 byte(s) in 1 object(s) allocated from:
+    #0 0x76178e32b60f in malloc ../../../../src/libsanitizer/asan/asan_malloc_linux.cpp:67
+    #1 0x643332688e1f in main /home/cat/gsb/uid4005/hardening/ma_decode_harness.c:62
+
+SUMMARY: AddressSanitizer: 1798052 byte(s) leaked in 1 allocation(s).
+
+[crash] crashes/crash_062_sample.flac_flachdr_1675mem
+
+=================================================================
+==3741164==ERROR: LeakSanitizer: detected memory leaks
+
+Direct leak of 1798052 byte(s) in 1 object(s) allocated from:
+    #0 0x7bfcd3b2b60f in malloc ../../../../src/libsanitizer/asan/asan_malloc_linux.cpp:67
+    #1 0x573e51e9ce1f in main /home/cat/gsb/uid4005/hardening/ma_decode_harness.c:62
+
+SUMMARY: AddressSanitizer: 1798052 byte(s) leaked in 1 allocation(s).
+
+[crash] crashes/crash_063_sample.flac_flachdr_1791mem
+
+=================================================================
+==3741748==ERROR: LeakSanitizer: detected memory leaks
+
+Direct leak of 1798052 byte(s) in 1 object(s) allocated from:
+    #0 0x76de7df2b60f in malloc ../../../../src/libsanitizer/asan/asan_malloc_linux.cpp:67
+    #1 0x5986872b2e1f in main /home/cat/gsb/uid4005/hardening/ma_decode_harness.c:62
+
+SUMMARY: AddressSanitizer: 1798052 byte(s) leaked in 1 allocation(s).
+
+[crash] crashes/crash_064_sample.flac_flachdr_1847mem
+
+=================================================================
+==3741749==ERROR: LeakSanitizer: detected memory leaks
+
+Direct leak of 1798052 byte(s) in 1 object(s) allocated from:
+    #0 0x7dc81a72b60f in malloc ../../../../src/libsanitizer/asan/asan_malloc_linux.cpp:67
+    #1 0x62feef0fce1f in main /home/cat/gsb/uid4005/hardening/ma_decode_harness.c:62
+
+SUMMARY: AddressSanitizer: 1798052 byte(s) leaked in 1 allocation(s).
+
+[crash] crashes/crash_065_tone.flac_truncflip_1830mem
+
+=================================================================
+==3741689==ERROR: LeakSanitizer: detected memory leaks
+
+Direct leak of 20518 byte(s) in 1 object(s) allocated from:
+    #0 0x765cd592b60f in malloc ../../../../src/libsanitizer/asan/asan_malloc_linux.cpp:67
+    #1 0x57ab6c5c7e1f in main /home/cat/gsb/uid4005/hardening/ma_decode_harness.c:62
+
+SUMMARY: AddressSanitizer: 20518 byte(s) leaked in 1 allocation(s).
+
+[crash] crashes/crash_066_tone.wav_hdrstorm_1876mem
+
+=================================================================
+==3741664==ERROR: LeakSanitizer: detected memory leaks
+
+Direct leak of 176479 byte(s) in 1 object(s) allocated from:
+    #0 0x7817ebb2b60f in malloc ../../../../src/libsanitizer/asan/asan_malloc_linux.cpp:67
+    #1 0x5a68dda21e1f in main /home/cat/gsb/uid4005/hardening/ma_decode_harness.c:62
+
+SUMMARY: AddressSanitizer: 176479 byte(s) leaked in 1 allocation(s).
+
+[crash] crashes/crash_067_tone.wav_hdrstorm_1912mem
+
+=================================================================
+==3742126==ERROR: LeakSanitizer: detected memory leaks
+
+Direct leak of 176479 byte(s) in 1 object(s) allocated from:
+    #0 0x79dd2bb2b60f in malloc ../../../../src/libsanitizer/asan/asan_malloc_linux.cpp:67
+    #1 0x5ee4eedb3e1f in main /home/cat/gsb/uid4005/hardening/ma_decode_harness.c:62
+
+SUMMARY: AddressSanitizer: 176479 byte(s) leaked in 1 allocation(s).
+
+[crash] crashes/crash_068_sample.flac_flachdr_1923mem
+
+=================================================================
+==3742230==ERROR: LeakSanitizer: detected memory leaks
+
+Direct leak of 1798052 byte(s) in 1 object(s) allocated from:
+    #0 0x713e9fd2b60f in malloc ../../../../src/libsanitizer/asan/asan_malloc_linux.cpp:67
+    #1 0x563a2411de1f in main /home/cat/gsb/uid4005/hardening/ma_decode_harness.c:62
+
+SUMMARY: AddressSanitizer: 1798052 byte(s) leaked in 1 allocation(s).
+
+[crash] crashes/crash_069_sample.flac_flachdr_2007mem
+
+=================================================================
+==3742670==ERROR: LeakSanitizer: detected memory leaks
+
+Direct leak of 1798052 byte(s) in 1 object(s) allocated from:
+    #0 0x74ae2612b60f in malloc ../../../../src/libsanitizer/asan/asan_malloc_linux.cpp:67
+    #1 0x5bd9043c7e1f in main /home/cat/gsb/uid4005/hardening/ma_decode_harness.c:62
+
+SUMMARY: AddressSanitizer: 1798052 byte(s) leaked in 1 allocation(s).
+
+[crash] crashes/crash_070_tone.flac_truncflip_2082mem
+
+=================================================================
+==3743123==ERROR: LeakSanitizer: detected memory leaks
+
+Direct leak of 19654 byte(s) in 1 object(s) allocated from:
+    #0 0x7e91a912b60f in malloc ../../../../src/libsanitizer/asan/asan_malloc_linux.cpp:67
+    #1 0x5ce750613e1f in main /home/cat/gsb/uid4005/hardening/ma_decode_harness.c:62
+
+SUMMARY: AddressSanitizer: 19654 byte(s) leaked in 1 allocation(s).
+
+[crash] crashes/crash_071_sample.flac_flachdr_2439mem
+
+=================================================================
+==3745652==ERROR: LeakSanitizer: detected memory leaks
+
+Direct leak of 1798052 byte(s) in 1 object(s) allocated from:
+    #0 0x71fe1ff2b60f in malloc ../../../../src/libsanitizer/asan/asan_malloc_linux.cpp:67
+    #1 0x5cfe8cd18e1f in main /home/cat/gsb/uid4005/hardening/ma_decode_harness.c:62
+
+SUMMARY: AddressSanitizer: 1798052 byte(s) leaked in 1 allocation(s).
+
+[crash] crashes/crash_072_sample.flac_flachdr_2667mem
+
+=================================================================
+==3746879==ERROR: LeakSanitizer: detected memory leaks
+
+Direct leak of 1798052 byte(s) in 1 object(s) allocated from:
+    #0 0x7e854452b60f in malloc ../../../../src/libsanitizer/asan/asan_malloc_linux.cpp:67
+    #1 0x64f53d49be1f in main /home/cat/gsb/uid4005/hardening/ma_decode_harness.c:62
+
+SUMMARY: AddressSanitizer: 1798052 byte(s) leaked in 1 allocation(s).
+
+[crash] crashes/crash_073_sample.flac_flachdr_2643mem
+
+=================================================================
+==3746542==ERROR: LeakSanitizer: detected memory leaks
+
+Direct leak of 1798052 byte(s) in 1 object(s) allocated from:
+    #0 0x7b727f12b60f in malloc ../../../../src/libsanitizer/asan/asan_malloc_linux.cpp:67
+    #1 0x5e2a79b1ae1f in main /home/cat/gsb/uid4005/hardening/ma_decode_harness.c:62
+
+SUMMARY: AddressSanitizer: 1798052 byte(s) leaked in 1 allocation(s).
+
+[crash] crashes/crash_074_sample.flac_flachdr_2651mem
+
+=================================================================
+==3746896==ERROR: LeakSanitizer: detected memory leaks
+
+Direct leak of 1798052 byte(s) in 1 object(s) allocated from:
+    #0 0x77f04ad2b60f in malloc ../../../../src/libsanitizer/asan/asan_malloc_linux.cpp:67
+    #1 0x654edf536e1f in main /home/cat/gsb/uid4005/hardening/ma_decode_harness.c:62
+
+SUMMARY: AddressSanitizer: 1798052 byte(s) leaked in 1 allocation(s).
+
+[crash] crashes/crash_075_sample.flac_flachdr_2595mem
+
+=================================================================
+==3746488==ERROR: LeakSanitizer: detected memory leaks
+
+Direct leak of 1798052 byte(s) in 1 object(s) allocated from:
+    #0 0x70e98372b60f in malloc ../../../../src/libsanitizer/asan/asan_malloc_linux.cpp:67
+    #1 0x5f1268de8e1f in main /home/cat/gsb/uid4005/hardening/ma_decode_harness.c:62
+
+SUMMARY: AddressSanitizer: 1798052 byte(s) leaked in 1 allocation(s).
+
+[crash] crashes/crash_076_sample.flac_flachdr_2599mem
+
+=================================================================
+==3746708==ERROR: LeakSanitizer: detected memory leaks
+
+Direct leak of 1798052 byte(s) in 1 object(s) allocated from:
+    #0 0x705df212b60f in malloc ../../../../src/libsanitizer/asan/asan_malloc_linux.cpp:67
+    #1 0x5c80f668de1f in main /home/cat/gsb/uid4005/hardening/ma_decode_harness.c:62
+
+SUMMARY: AddressSanitizer: 1798052 byte(s) leaked in 1 allocation(s).
+
+[crash] crashes/crash_077_sample.flac_flachdr_2743mem
+
+=================================================================
+==3747448==ERROR: LeakSanitizer: detected memory leaks
+
+Direct leak of 1798052 byte(s) in 1 object(s) allocated from:
+    #0 0x71e27bf2b60f in malloc ../../../../src/libsanitizer/asan/asan_malloc_linux.cpp:67
+    #1 0x59dde82fbe1f in main /home/cat/gsb/uid4005/hardening/ma_decode_harness.c:62
+
+SUMMARY: AddressSanitizer: 1798052 byte(s) leaked in 1 allocation(s).
+
+[crash] crashes/crash_078_sample.flac_flachdr_2943mem
+
+=================================================================
+==3748664==ERROR: LeakSanitizer: detected memory leaks
+
+Direct leak of 1798052 byte(s) in 1 object(s) allocated from:
+    #0 0x70f77bd2b60f in malloc ../../../../src/libsanitizer/asan/asan_malloc_linux.cpp:67
+    #1 0x5d363e00ee1f in main /home/cat/gsb/uid4005/hardening/ma_decode_harness.c:62
+
+SUMMARY: AddressSanitizer: 1798052 byte(s) leaked in 1 allocation(s).
+
+[crash] crashes/crash_079_tone.wav_hdrstorm_2944mem
+
+=================================================================
+==3748491==ERROR: LeakSanitizer: detected memory leaks
+
+Direct leak of 176479 byte(s) in 1 object(s) allocated from:
+    #0 0x7b2ea932b60f in malloc ../../../../src/libsanitizer/asan/asan_malloc_linux.cpp:67
+    #1 0x59f3569f2e1f in main /home/cat/gsb/uid4005/hardening/ma_decode_harness.c:62
+
+SUMMARY: AddressSanitizer: 176479 byte(s) leaked in 1 allocation(s).
+
+[crash] crashes/crash_080_sample.flac_flachdr_3087mem
+
+=================================================================
+==3750146==ERROR: LeakSanitizer: detected memory leaks
+
+Direct leak of 1798052 byte(s) in 1 object(s) allocated from:
+    #0 0x71673612b60f in malloc ../../../../src/libsanitizer/asan/asan_malloc_linux.cpp:67
+    #1 0x638d0dc34e1f in main /home/cat/gsb/uid4005/hardening/ma_decode_harness.c:62
+
+SUMMARY: AddressSanitizer: 1798052 byte(s) leaked in 1 allocation(s).
+
+[crash] crashes/crash_081_tone.mp3_flip_3137mem
+
+=================================================================
+==3749515==ERROR: LeakSanitizer: detected memory leaks
+
+Direct leak of 17180 byte(s) in 1 object(s) allocated from:
+    #0 0x73f38b72b60f in malloc ../../../../src/libsanitizer/asan/asan_malloc_linux.cpp:67
+    #1 0x63c58e2ece1f in main /home/cat/gsb/uid4005/hardening/ma_decode_harness.c:62
+
+SUMMARY: AddressSanitizer: 17180 byte(s) leaked in 1 allocation(s).
+
+[crash] crashes/crash_082_sample.flac_flachdr_3347mem
+
+=================================================================
+==3751062==ERROR: LeakSanitizer: detected memory leaks
+
+Direct leak of 1798052 byte(s) in 1 object(s) allocated from:
+    #0 0x7764aff2b60f in malloc ../../../../src/libsanitizer/asan/asan_malloc_linux.cpp:67
+    #1 0x6532eb949e1f in main /home/cat/gsb/uid4005/hardening/ma_decode_harness.c:62
+
+SUMMARY: AddressSanitizer: 1798052 byte(s) leaked in 1 allocation(s).
+
+[crash] crashes/crash_083_sample.flac_flachdr_3635mem
+
+=================================================================
+==3752707==ERROR: LeakSanitizer: detected memory leaks
+
+Direct leak of 1798052 byte(s) in 1 object(s) allocated from:
+    #0 0x73d6a892b60f in malloc ../../../../src/libsanitizer/asan/asan_malloc_linux.cpp:67
+    #1 0x6434f66d1e1f in main /home/cat/gsb/uid4005/hardening/ma_decode_harness.c:62
+
+SUMMARY: AddressSanitizer: 1798052 byte(s) leaked in 1 allocation(s).
+
+[crash] crashes/crash_084_sample.flac_flachdr_3915mem
+
+=================================================================
+==3754526==ERROR: LeakSanitizer: detected memory leaks
+
+Direct leak of 1798052 byte(s) in 1 object(s) allocated from:
+    #0 0x75478892b60f in malloc ../../../../src/libsanitizer/asan/asan_malloc_linux.cpp:67
+    #1 0x618cb5096e1f in main /home/cat/gsb/uid4005/hardening/ma_decode_harness.c:62
+
+SUMMARY: AddressSanitizer: 1798052 byte(s) leaked in 1 allocation(s).
+
+[crash] crashes/crash_085_sample.flac_flachdr_3963mem
+
+=================================================================
+==3754930==ERROR: LeakSanitizer: detected memory leaks
+
+Direct leak of 1798052 byte(s) in 1 object(s) allocated from:
+    #0 0x79a72b12b60f in malloc ../../../../src/libsanitizer/asan/asan_malloc_linux.cpp:67
+    #1 0x60a55eccbe1f in main /home/cat/gsb/uid4005/hardening/ma_decode_harness.c:62
+
+SUMMARY: AddressSanitizer: 1798052 byte(s) leaked in 1 allocation(s).
+
+[crash] crashes/crash_086_sample.flac_flachdr_3991mem
+
+=================================================================
+==3755036==ERROR: LeakSanitizer: detected memory leaks
+
+Direct leak of 1798052 byte(s) in 1 object(s) allocated from:
+    #0 0x7c7c4c92b60f in malloc ../../../../src/libsanitizer/asan/asan_malloc_linux.cpp:67
+    #1 0x5a3f6eb12e1f in main /home/cat/gsb/uid4005/hardening/ma_decode_harness.c:62
+
+SUMMARY: AddressSanitizer: 1798052 byte(s) leaked in 1 allocation(s).
+
+[crash] crashes/crash_087_sample.flac_flachdr_4083mem
+
+=================================================================
+==3755374==ERROR: LeakSanitizer: detected memory leaks
+
+Direct leak of 1798052 byte(s) in 1 object(s) allocated from:
+    #0 0x7b6021b2b60f in malloc ../../../../src/libsanitizer/asan/asan_malloc_linux.cpp:67
+    #1 0x651ecb1d2e1f in main /home/cat/gsb/uid4005/hardening/ma_decode_harness.c:62
+
+SUMMARY: AddressSanitizer: 1798052 byte(s) leaked in 1 allocation(s).
+
+[crash] crashes/crash_088_sample.flac_flachdr_4115mem
+
+=================================================================
+==3755752==ERROR: LeakSanitizer: detected memory leaks
+
+Direct leak of 1798052 byte(s) in 1 object(s) allocated from:
+    #0 0x71b87ef2b60f in malloc ../../../../src/libsanitizer/asan/asan_malloc_linux.cpp:67
+    #1 0x567d3cafde1f in main /home/cat/gsb/uid4005/hardening/ma_decode_harness.c:62
+
+SUMMARY: AddressSanitizer: 1798052 byte(s) leaked in 1 allocation(s).
+
+[crash] crashes/crash_089_sample.flac_flachdr_4435mem
+
+=================================================================
+==3757501==ERROR: LeakSanitizer: detected memory leaks
+
+Direct leak of 1798052 byte(s) in 1 object(s) allocated from:
+    #0 0x784a4552b60f in malloc ../../../../src/libsanitizer/asan/asan_malloc_linux.cpp:67
+    #1 0x557033907e1f in main /home/cat/gsb/uid4005/hardening/ma_decode_harness.c:62
+
+SUMMARY: AddressSanitizer: 1798052 byte(s) leaked in 1 allocation(s).
+
+[crash] crashes/crash_090_sample.flac_flachdr_4615mem
+
+=================================================================
+==3759040==ERROR: LeakSanitizer: detected memory leaks
+
+Direct leak of 1798052 byte(s) in 1 object(s) allocated from:
+    #0 0x7d0ccc52b60f in malloc ../../../../src/libsanitizer/asan/asan_malloc_linux.cpp:67
+    #1 0x61f5d57dde1f in main /home/cat/gsb/uid4005/hardening/ma_decode_harness.c:62
+
+SUMMARY: AddressSanitizer: 1798052 byte(s) leaked in 1 allocation(s).
+
+[crash] crashes/crash_091_sample.flac_flachdr_4619mem
+
+=================================================================
+==3759237==ERROR: LeakSanitizer: detected memory leaks
+
+Direct leak of 1798052 byte(s) in 1 object(s) allocated from:
+    #0 0x7b04b6b2b60f in malloc ../../../../src/libsanitizer/asan/asan_malloc_linux.cpp:67
+    #1 0x559413319e1f in main /home/cat/gsb/uid4005/hardening/ma_decode_harness.c:62
+
+SUMMARY: AddressSanitizer: 1798052 byte(s) leaked in 1 allocation(s).
+
+[crash] crashes/crash_092_sample.flac_flachdr_4643mem
+
+=================================================================
+==3758889==ERROR: LeakSanitizer: detected memory leaks
+
+Direct leak of 1798052 byte(s) in 1 object(s) allocated from:
+    #0 0x700edb92b60f in malloc ../../../../src/libsanitizer/asan/asan_malloc_linux.cpp:67
+    #1 0x6039d572be1f in main /home/cat/gsb/uid4005/hardening/ma_decode_harness.c:62
+
+SUMMARY: AddressSanitizer: 1798052 byte(s) leaked in 1 allocation(s).
+
+[crash] crashes/crash_093_sample.flac_flachdr_4675mem
+
+=================================================================
+==3758927==ERROR: LeakSanitizer: detected memory leaks
+
+Direct leak of 1798052 byte(s) in 1 object(s) allocated from:
+    #0 0x72ac47f2b60f in malloc ../../../../src/libsanitizer/asan/asan_malloc_linux.cpp:67
+    #1 0x607e1fa71e1f in main /home/cat/gsb/uid4005/hardening/ma_decode_harness.c:62
+
+SUMMARY: AddressSanitizer: 1798052 byte(s) leaked in 1 allocation(s).
+
+[crash] crashes/crash_094_tone.wav_hdrstorm_4944mem
+
+=================================================================
+==3760518==ERROR: LeakSanitizer: detected memory leaks
+
+Direct leak of 176479 byte(s) in 1 object(s) allocated from:
+    #0 0x7dbb5ab2b60f in malloc ../../../../src/libsanitizer/asan/asan_malloc_linux.cpp:67
+    #1 0x6052e42bfe1f in main /home/cat/gsb/uid4005/hardening/ma_decode_harness.c:62
+
+SUMMARY: AddressSanitizer: 176479 byte(s) leaked in 1 allocation(s).
+
+[crash] crashes/crash_095_sample.flac_flachdr_5003mem
+
+=================================================================
+==3761337==ERROR: LeakSanitizer: detected memory leaks
+
+Direct leak of 1798052 byte(s) in 1 object(s) allocated from:
+    #0 0x7e903532b60f in malloc ../../../../src/libsanitizer/asan/asan_malloc_linux.cpp:67
+    #1 0x58ce8d4e8e1f in main /home/cat/gsb/uid4005/hardening/ma_decode_harness.c:62
+
+SUMMARY: AddressSanitizer: 1798052 byte(s) leaked in 1 allocation(s).
+
+[crash] crashes/crash_096_tone.wav_hdrstorm_5020mem
+
+=================================================================
+==3761403==ERROR: LeakSanitizer: detected memory leaks
+
+Direct leak of 176479 byte(s) in 1 object(s) allocated from:
+    #0 0x76bfc2b2b60f in malloc ../../../../src/libsanitizer/asan/asan_malloc_linux.cpp:67
+    #1 0x5fba0999ee1f in main /home/cat/gsb/uid4005/hardening/ma_decode_harness.c:62
+
+SUMMARY: AddressSanitizer: 176479 byte(s) leaked in 1 allocation(s).
+
+[crash] crashes/crash_097_sample.flac_flachdr_5079mem
+
+=================================================================
+==3761526==ERROR: LeakSanitizer: detected memory leaks
+
+Direct leak of 1798052 byte(s) in 1 object(s) allocated from:
+    #0 0x74c729b2b60f in malloc ../../../../src/libsanitizer/asan/asan_malloc_linux.cpp:67
+    #1 0x62eaddeb7e1f in main /home/cat/gsb/uid4005/hardening/ma_decode_harness.c:62
+
+SUMMARY: AddressSanitizer: 1798052 byte(s) leaked in 1 allocation(s).
+
+[crash] crashes/crash_098_tone.flac_truncflip_5090mem
+
+=================================================================
+==3761415==ERROR: LeakSanitizer: detected memory leaks
+
+Direct leak of 13917 byte(s) in 1 object(s) allocated from:
+    #0 0x77b95652b60f in malloc ../../../../src/libsanitizer/asan/asan_malloc_linux.cpp:67
+    #1 0x60e833d20e1f in main /home/cat/gsb/uid4005/hardening/ma_decode_harness.c:62
+
+SUMMARY: AddressSanitizer: 13917 byte(s) leaked in 1 allocation(s).
+
+[crash] crashes/crash_099_sample.flac_flachdr_5203mem
+
+=================================================================
+==3762059==ERROR: LeakSanitizer: detected memory leaks
+
+Direct leak of 1798052 byte(s) in 1 object(s) allocated from:
+    #0 0x70035df2b60f in malloc ../../../../src/libsanitizer/asan/asan_malloc_linux.cpp:67
+    #1 0x5d9808afae1f in main /home/cat/gsb/uid4005/hardening/ma_decode_harness.c:62
+
+SUMMARY: AddressSanitizer: 1798052 byte(s) leaked in 1 allocation(s).
+
+[crash] crashes/crash_100_sample.flac_flachdr_5171mem
+
+=================================================================
+==3762051==ERROR: LeakSanitizer: detected memory leaks
+
+Direct leak of 1798052 byte(s) in 1 object(s) allocated from:
+    #0 0x74a2dc92b60f in malloc ../../../../src/libsanitizer/asan/asan_malloc_linux.cpp:67
+    #1 0x61beb43ace1f in main /home/cat/gsb/uid4005/hardening/ma_decode_harness.c:62
+
+SUMMARY: AddressSanitizer: 1798052 byte(s) leaked in 1 allocation(s).
+
+[crash] crashes/crash_101_tone.wav_hdrstorm_5184mem
+
+=================================================================
+==3761940==ERROR: LeakSanitizer: detected memory leaks
+
+Direct leak of 176479 byte(s) in 1 object(s) allocated from:
+    #0 0x70b1edd2b60f in malloc ../../../../src/libsanitizer/asan/asan_malloc_linux.cpp:67
+    #1 0x60d7f6378e1f in main /home/cat/gsb/uid4005/hardening/ma_decode_harness.c:62
+
+SUMMARY: AddressSanitizer: 176479 byte(s) leaked in 1 allocation(s).
+
+[crash] crashes/crash_102_sample.flac_flachdr_5223mem
+
+=================================================================
+==3762236==ERROR: LeakSanitizer: detected memory leaks
+
+Direct leak of 1798052 byte(s) in 1 object(s) allocated from:
+    #0 0x7774f332b60f in malloc ../../../../src/libsanitizer/asan/asan_malloc_linux.cpp:67
+    #1 0x5b05b95e4e1f in main /home/cat/gsb/uid4005/hardening/ma_decode_harness.c:62
+
+SUMMARY: AddressSanitizer: 1798052 byte(s) leaked in 1 allocation(s).
+
+[crash] crashes/crash_103_tone.wav_hdrstorm_5240mem
+
+=================================================================
+==3762308==ERROR: LeakSanitizer: detected memory leaks
+
+Direct leak of 176479 byte(s) in 1 object(s) allocated from:
+    #0 0x73ff5132b60f in malloc ../../../../src/libsanitizer/asan/asan_malloc_linux.cpp:67
+    #1 0x58fb08550e1f in main /home/cat/gsb/uid4005/hardening/ma_decode_harness.c:62
+
+SUMMARY: AddressSanitizer: 176479 byte(s) leaked in 1 allocation(s).
+
+[crash] crashes/crash_104_tone.mp3_flip_5249mem
+
+=================================================================
+==3762681==ERROR: LeakSanitizer: detected memory leaks
+
+Direct leak of 17180 byte(s) in 1 object(s) allocated from:
+    #0 0x79189192b60f in malloc ../../../../src/libsanitizer/asan/asan_malloc_linux.cpp:67
+    #1 0x62aeeba8de1f in main /home/cat/gsb/uid4005/hardening/ma_decode_harness.c:62
+
+SUMMARY: AddressSanitizer: 17180 byte(s) leaked in 1 allocation(s).
+
+[crash] crashes/crash_105_tone.flac_truncflip_5546mem
+
+=================================================================
+==3764676==ERROR: LeakSanitizer: detected memory leaks
+
+Direct leak of 17271 byte(s) in 1 object(s) allocated from:
+    #0 0x7dd792d2b60f in malloc ../../../../src/libsanitizer/asan/asan_malloc_linux.cpp:67
+    #1 0x62c0f89e9e1f in main /home/cat/gsb/uid4005/hardening/ma_decode_harness.c:62
+
+SUMMARY: AddressSanitizer: 17271 byte(s) leaked in 1 allocation(s).
+
+[crash] crashes/crash_106_sample.flac_flachdr_5659mem
+
+=================================================================
+==3765475==ERROR: LeakSanitizer: detected memory leaks
+
+Direct leak of 1798052 byte(s) in 1 object(s) allocated from:
+    #0 0x779ce8f2b60f in malloc ../../../../src/libsanitizer/asan/asan_malloc_linux.cpp:67
+    #1 0x56049fe12e1f in main /home/cat/gsb/uid4005/hardening/ma_decode_harness.c:62
+
+SUMMARY: AddressSanitizer: 1798052 byte(s) leaked in 1 allocation(s).
+
+[crash] crashes/crash_107_tone.flac_truncflip_5682mem
+
+=================================================================
+==3765104==ERROR: LeakSanitizer: detected memory leaks
+
+Direct leak of 14556 byte(s) in 1 object(s) allocated from:
+    #0 0x7ba25d12b60f in malloc ../../../../src/libsanitizer/asan/asan_malloc_linux.cpp:67
+    #1 0x64778ee6be1f in main /home/cat/gsb/uid4005/hardening/ma_decode_harness.c:62
+
+SUMMARY: AddressSanitizer: 14556 byte(s) leaked in 1 allocation(s).
+
+[crash] crashes/crash_108_tone.flac_truncflip_5702mem
+
+=================================================================
+==3765299==ERROR: LeakSanitizer: detected memory leaks
+
+Direct leak of 9322 byte(s) in 1 object(s) allocated from:
+    #0 0x74c60992b60f in malloc ../../../../src/libsanitizer/asan/asan_malloc_linux.cpp:67
+    #1 0x579cb5b88e1f in main /home/cat/gsb/uid4005/hardening/ma_decode_harness.c:62
+
+SUMMARY: AddressSanitizer: 9322 byte(s) leaked in 1 allocation(s).
+
+[crash] crashes/crash_109_sample.flac_flachdr_5847mem
+
+=================================================================
+==3766156==ERROR: LeakSanitizer: detected memory leaks
+
+Direct leak of 1798052 byte(s) in 1 object(s) allocated from:
+    #0 0x7893b4d2b60f in malloc ../../../../src/libsanitizer/asan/asan_malloc_linux.cpp:67
+    #1 0x62dd1386ee1f in main /home/cat/gsb/uid4005/hardening/ma_decode_harness.c:62
+
+SUMMARY: AddressSanitizer: 1798052 byte(s) leaked in 1 allocation(s).
+
+[crash] crashes/crash_110_sample.flac_flachdr_5883mem
+
+=================================================================
+==3766344==ERROR: LeakSanitizer: detected memory leaks
+
+Direct leak of 1798052 byte(s) in 1 object(s) allocated from:
+    #0 0x73052432b60f in malloc ../../../../src/libsanitizer/asan/asan_malloc_linux.cpp:67
+    #1 0x60b0d1f82e1f in main /home/cat/gsb/uid4005/hardening/ma_decode_harness.c:62
+
+SUMMARY: AddressSanitizer: 1798052 byte(s) leaked in 1 allocation(s).
+
+[crash] crashes/crash_111_sample.flac_flachdr_5815mem
+
+=================================================================
+==3766137==ERROR: LeakSanitizer: detected memory leaks
+
+Direct leak of 1798052 byte(s) in 1 object(s) allocated from:
+    #0 0x79c32972b60f in malloc ../../../../src/libsanitizer/asan/asan_malloc_linux.cpp:67
+    #1 0x56506a3fae1f in main /home/cat/gsb/uid4005/hardening/ma_decode_harness.c:62
+
+SUMMARY: AddressSanitizer: 1798052 byte(s) leaked in 1 allocation(s).
+
+[crash] crashes/crash_112_tone.wav_hdrstorm_5820mem
+
+=================================================================
+==3766369==ERROR: LeakSanitizer: detected memory leaks
+
+Direct leak of 176479 byte(s) in 1 object(s) allocated from:
+    #0 0x78565e72b60f in malloc ../../../../src/libsanitizer/asan/asan_malloc_linux.cpp:67
+    #1 0x58c64e6f7e1f in main /home/cat/gsb/uid4005/hardening/ma_decode_harness.c:62
+
+SUMMARY: AddressSanitizer: 176479 byte(s) leaked in 1 allocation(s).
+
+[crash] crashes/crash_113_sample.flac_flachdr_5863mem
+
+=================================================================
+==3766154==ERROR: LeakSanitizer: detected memory leaks
+
+Direct leak of 1798052 byte(s) in 1 object(s) allocated from:
+    #0 0x707c58b2b60f in malloc ../../../../src/libsanitizer/asan/asan_malloc_linux.cpp:67
+    #1 0x5cc7873e9e1f in main /home/cat/gsb/uid4005/hardening/ma_decode_harness.c:62
+
+SUMMARY: AddressSanitizer: 1798052 byte(s) leaked in 1 allocation(s).
+
+[crash] crashes/crash_114_sample.flac_flachdr_6063mem
+
+=================================================================
+==3767995==ERROR: LeakSanitizer: detected memory leaks
+
+Direct leak of 1798052 byte(s) in 1 object(s) allocated from:
+    #0 0x79a89cd2b60f in malloc ../../../../src/libsanitizer/asan/asan_malloc_linux.cpp:67
+    #1 0x5801bf9ace1f in main /home/cat/gsb/uid4005/hardening/ma_decode_harness.c:62
+
+SUMMARY: AddressSanitizer: 1798052 byte(s) leaked in 1 allocation(s).
+
+[crash] crashes/crash_115_tone.wav_hdrstorm_6036mem
+
+=================================================================
+==3767508==ERROR: LeakSanitizer: detected memory leaks
+
+Direct leak of 176479 byte(s) in 1 object(s) allocated from:
+    #0 0x7f5e4452b60f in malloc ../../../../src/libsanitizer/asan/asan_malloc_linux.cpp:67
+    #1 0x57d11730ee1f in main /home/cat/gsb/uid4005/hardening/ma_decode_harness.c:62
+
+SUMMARY: AddressSanitizer: 176479 byte(s) leaked in 1 allocation(s).
+
+[crash] crashes/crash_116_sample.flac_flachdr_6579mem
+
+=================================================================
+==3770599==ERROR: LeakSanitizer: detected memory leaks
+
+Direct leak of 1798052 byte(s) in 1 object(s) allocated from:
+    #0 0x7e5587f2b60f in malloc ../../../../src/libsanitizer/asan/asan_malloc_linux.cpp:67
+    #1 0x5d26062a2e1f in main /home/cat/gsb/uid4005/hardening/ma_decode_harness.c:62
+
+SUMMARY: AddressSanitizer: 1798052 byte(s) leaked in 1 allocation(s).
+
+[crash] crashes/crash_117_tone.wav_hdrstorm_6564mem
+
+=================================================================
+==3770686==ERROR: LeakSanitizer: detected memory leaks
+
+Direct leak of 176479 byte(s) in 1 object(s) allocated from:
+    #0 0x794a3172b60f in malloc ../../../../src/libsanitizer/asan/asan_malloc_linux.cpp:67
+    #1 0x59f8d7519e1f in main /home/cat/gsb/uid4005/hardening/ma_decode_harness.c:62
+
+SUMMARY: AddressSanitizer: 176479 byte(s) leaked in 1 allocation(s).
+
+[crash] crashes/crash_118_tone.mp3_flip_6657mem
+
+=================================================================
+==3771224==ERROR: LeakSanitizer: detected memory leaks
+
+Direct leak of 17180 byte(s) in 1 object(s) allocated from:
+    #0 0x7f24ab32b60f in malloc ../../../../src/libsanitizer/asan/asan_malloc_linux.cpp:67
+    #1 0x597c7cb39e1f in main /home/cat/gsb/uid4005/hardening/ma_decode_harness.c:62
+
+SUMMARY: AddressSanitizer: 17180 byte(s) leaked in 1 allocation(s).
+
+[crash] crashes/crash_119_sample.flac_flachdr_6723mem
+
+=================================================================
+==3771371==ERROR: LeakSanitizer: detected memory leaks
+
+Direct leak of 1798052 byte(s) in 1 object(s) allocated from:
+    #0 0x7e07ed12b60f in malloc ../../../../src/libsanitizer/asan/asan_malloc_linux.cpp:67
+    #1 0x601eb87fbe1f in main /home/cat/gsb/uid4005/hardening/ma_decode_harness.c:62
+
+SUMMARY: AddressSanitizer: 1798052 byte(s) leaked in 1 allocation(s).
+
+[crash] crashes/crash_120_sample.flac_flachdr_6791mem
+
+=================================================================
+==3772205==ERROR: LeakSanitizer: detected memory leaks
+
+Direct leak of 1798052 byte(s) in 1 object(s) allocated from:
+    #0 0x732a2932b60f in malloc ../../../../src/libsanitizer/asan/asan_malloc_linux.cpp:67
+    #1 0x5fa5aaa4ee1f in main /home/cat/gsb/uid4005/hardening/ma_decode_harness.c:62
+
+SUMMARY: AddressSanitizer: 1798052 byte(s) leaked in 1 allocation(s).
+
+[crash] crashes/crash_121_sample.flac_flachdr_6891mem
+
+=================================================================
+==3772693==ERROR: LeakSanitizer: detected memory leaks
+
+Direct leak of 1798052 byte(s) in 1 object(s) allocated from:
+    #0 0x7cb7b792b60f in malloc ../../../../src/libsanitizer/asan/asan_malloc_linux.cpp:67
+    #1 0x5f5fd1e77e1f in main /home/cat/gsb/uid4005/hardening/ma_decode_harness.c:62
+
+SUMMARY: AddressSanitizer: 1798052 byte(s) leaked in 1 allocation(s).
+
+[crash] crashes/crash_122_sample.flac_flachdr_6943mem
+
+=================================================================
+==3773287==ERROR: LeakSanitizer: detected memory leaks
+
+Direct leak of 1798052 byte(s) in 1 object(s) allocated from:
+    #0 0x70d06bf2b60f in malloc ../../../../src/libsanitizer/asan/asan_malloc_linux.cpp:67
+    #1 0x63d470d76e1f in main /home/cat/gsb/uid4005/hardening/ma_decode_harness.c:62
+
+SUMMARY: AddressSanitizer: 1798052 byte(s) leaked in 1 allocation(s).
+
+[crash] crashes/crash_123_sample.flac_flachdr_7035mem
+
+=================================================================
+==3773706==ERROR: LeakSanitizer: detected memory leaks
+
+Direct leak of 1798052 byte(s) in 1 object(s) allocated from:
+    #0 0x71386b32b60f in malloc ../../../../src/libsanitizer/asan/asan_malloc_linux.cpp:67
+    #1 0x5c4da0ac2e1f in main /home/cat/gsb/uid4005/hardening/ma_decode_harness.c:62
+
+SUMMARY: AddressSanitizer: 1798052 byte(s) leaked in 1 allocation(s).
+
+[crash] crashes/crash_124_sample.flac_flachdr_7127mem
+
+=================================================================
+==3774042==ERROR: LeakSanitizer: detected memory leaks
+
+Direct leak of 1798052 byte(s) in 1 object(s) allocated from:
+    #0 0x746d9352b60f in malloc ../../../../src/libsanitizer/asan/asan_malloc_linux.cpp:67
+    #1 0x60c358633e1f in main /home/cat/gsb/uid4005/hardening/ma_decode_harness.c:62
+
+SUMMARY: AddressSanitizer: 1798052 byte(s) leaked in 1 allocation(s).
+
+[crash] crashes/crash_125_sample.flac_flachdr_7467mem
+
+=================================================================
+==3776271==ERROR: LeakSanitizer: detected memory leaks
+
+Direct leak of 1798052 byte(s) in 1 object(s) allocated from:
+    #0 0x7f2917d2b60f in malloc ../../../../src/libsanitizer/asan/asan_malloc_linux.cpp:67
+    #1 0x623fc51bbe1f in main /home/cat/gsb/uid4005/hardening/ma_decode_harness.c:62
+
+SUMMARY: AddressSanitizer: 1798052 byte(s) leaked in 1 allocation(s).
+
+[crash] crashes/crash_126_tone.wav_hdrstorm_7448mem
+
+=================================================================
+==3776179==ERROR: LeakSanitizer: detected memory leaks
+
+Direct leak of 176479 byte(s) in 1 object(s) allocated from:
+    #0 0x7bae5192b60f in malloc ../../../../src/libsanitizer/asan/asan_malloc_linux.cpp:67
+    #1 0x58f907216e1f in main /home/cat/gsb/uid4005/hardening/ma_decode_harness.c:62
+
+SUMMARY: AddressSanitizer: 176479 byte(s) leaked in 1 allocation(s).
+
+[crash] crashes/crash_127_sample.flac_flachdr_7527mem
+
+=================================================================
+==3776467==ERROR: LeakSanitizer: detected memory leaks
+
+Direct leak of 1798052 byte(s) in 1 object(s) allocated from:
+    #0 0x7deec612b60f in malloc ../../../../src/libsanitizer/asan/asan_malloc_linux.cpp:67
+    #1 0x5f01f8882e1f in main /home/cat/gsb/uid4005/hardening/ma_decode_harness.c:62
+
+SUMMARY: AddressSanitizer: 1798052 byte(s) leaked in 1 allocation(s).
+
+[crash] crashes/crash_128_tone.wav_hdrstorm_7504mem
+
+=================================================================
+==3775974==ERROR: LeakSanitizer: detected memory leaks
+
+Direct leak of 176479 byte(s) in 1 object(s) allocated from:
+    #0 0x714bef72b60f in malloc ../../../../src/libsanitizer/asan/asan_malloc_linux.cpp:67
+    #1 0x6520e9e7ce1f in main /home/cat/gsb/uid4005/hardening/ma_decode_harness.c:62
+
+SUMMARY: AddressSanitizer: 176479 byte(s) leaked in 1 allocation(s).
+
+[crash] crashes/crash_129_sample.flac_flachdr_7715mem
+
+=================================================================
+==3777593==ERROR: LeakSanitizer: detected memory leaks
+
+Direct leak of 1798052 byte(s) in 1 object(s) allocated from:
+    #0 0x763265d2b60f in malloc ../../../../src/libsanitizer/asan/asan_malloc_linux.cpp:67
+    #1 0x62055cb00e1f in main /home/cat/gsb/uid4005/hardening/ma_decode_harness.c:62
+
+SUMMARY: AddressSanitizer: 1798052 byte(s) leaked in 1 allocation(s).
+
+[crash] crashes/crash_130_sample.flac_flachdr_7899mem
+
+=================================================================
+==3778847==ERROR: LeakSanitizer: detected memory leaks
+
+Direct leak of 1798052 byte(s) in 1 object(s) allocated from:
+    #0 0x78de77b2b60f in malloc ../../../../src/libsanitizer/asan/asan_malloc_linux.cpp:67
+    #1 0x596f089c4e1f in main /home/cat/gsb/uid4005/hardening/ma_decode_harness.c:62
+
+SUMMARY: AddressSanitizer: 1798052 byte(s) leaked in 1 allocation(s).
+
+[crash] crashes/crash_131_sample.flac_flachdr_8123mem
+
+=================================================================
+==3780303==ERROR: LeakSanitizer: detected memory leaks
+
+Direct leak of 1798052 byte(s) in 1 object(s) allocated from:
+    #0 0x740e5412b60f in malloc ../../../../src/libsanitizer/asan/asan_malloc_linux.cpp:67
+    #1 0x5989e68c6e1f in main /home/cat/gsb/uid4005/hardening/ma_decode_harness.c:62
+
+SUMMARY: AddressSanitizer: 1798052 byte(s) leaked in 1 allocation(s).
+
+[crash] crashes/crash_132_sample.flac_flachdr_8135mem
+
+=================================================================
+==3780172==ERROR: LeakSanitizer: detected memory leaks
+
+Direct leak of 1798052 byte(s) in 1 object(s) allocated from:
+    #0 0x7ba848d2b60f in malloc ../../../../src/libsanitizer/asan/asan_malloc_linux.cpp:67
+    #1 0x5a7494877e1f in main /home/cat/gsb/uid4005/hardening/ma_decode_harness.c:62
+
+SUMMARY: AddressSanitizer: 1798052 byte(s) leaked in 1 allocation(s).
+
+[crash] crashes/crash_133_sample.flac_flachdr_8179mem
+
+=================================================================
+==3780264==ERROR: LeakSanitizer: detected memory leaks
+
+Direct leak of 1798052 byte(s) in 1 object(s) allocated from:
+    #0 0x77e89d92b60f in malloc ../../../../src/libsanitizer/asan/asan_malloc_linux.cpp:67
+    #1 0x575c378f8e1f in main /home/cat/gsb/uid4005/hardening/ma_decode_harness.c:62
+
+SUMMARY: AddressSanitizer: 1798052 byte(s) leaked in 1 allocation(s).
+
+[crash] crashes/crash_134_sample.flac_flachdr_8263mem
+
+=================================================================
+==3780946==ERROR: LeakSanitizer: detected memory leaks
+
+Direct leak of 1798052 byte(s) in 1 object(s) allocated from:
+    #0 0x75f0f4f2b60f in malloc ../../../../src/libsanitizer/asan/asan_malloc_linux.cpp:67
+    #1 0x61ebd35a2e1f in main /home/cat/gsb/uid4005/hardening/ma_decode_harness.c:62
+
+SUMMARY: AddressSanitizer: 1798052 byte(s) leaked in 1 allocation(s).
+
+[crash] crashes/crash_135_tone.flac_truncflip_8286mem
+
+=================================================================
+==3781244==ERROR: LeakSanitizer: detected memory leaks
+
+Direct leak of 18870 byte(s) in 1 object(s) allocated from:
+    #0 0x7bdfbe12b60f in malloc ../../../../src/libsanitizer/asan/asan_malloc_linux.cpp:67
+    #1 0x58185e226e1f in main /home/cat/gsb/uid4005/hardening/ma_decode_harness.c:62
+
+SUMMARY: AddressSanitizer: 18870 byte(s) leaked in 1 allocation(s).
+
+[crash] crashes/crash_136_sample.flac_flachdr_8443mem
+
+=================================================================
+==3782281==ERROR: LeakSanitizer: detected memory leaks
+
+Direct leak of 1798052 byte(s) in 1 object(s) allocated from:
+    #0 0x747d2e72b60f in malloc ../../../../src/libsanitizer/asan/asan_malloc_linux.cpp:67
+    #1 0x58da1974ce1f in main /home/cat/gsb/uid4005/hardening/ma_decode_harness.c:62
+
+SUMMARY: AddressSanitizer: 1798052 byte(s) leaked in 1 allocation(s).
+
+[crash] crashes/crash_137_sample.flac_flachdr_8467mem
+
+=================================================================
+==3782282==ERROR: LeakSanitizer: detected memory leaks
+
+Direct leak of 1798052 byte(s) in 1 object(s) allocated from:
+    #0 0x71cb3b32b60f in malloc ../../../../src/libsanitizer/asan/asan_malloc_linux.cpp:67
+    #1 0x56080b9bbe1f in main /home/cat/gsb/uid4005/hardening/ma_decode_harness.c:62
+
+SUMMARY: AddressSanitizer: 1798052 byte(s) leaked in 1 allocation(s).
+
+[crash] crashes/crash_138_sample.flac_flachdr_8483mem
+
+=================================================================
+==3782306==ERROR: LeakSanitizer: detected memory leaks
+
+Direct leak of 1798052 byte(s) in 1 object(s) allocated from:
+    #0 0x75719672b60f in malloc ../../../../src/libsanitizer/asan/asan_malloc_linux.cpp:67
+    #1 0x56322ce22e1f in main /home/cat/gsb/uid4005/hardening/ma_decode_harness.c:62
+
+SUMMARY: AddressSanitizer: 1798052 byte(s) leaked in 1 allocation(s).
+
+[crash] crashes/crash_139_tone.wav_hdrstorm_8524mem
+
+=================================================================
+==3782768==ERROR: LeakSanitizer: detected memory leaks
+
+Direct leak of 176479 byte(s) in 1 object(s) allocated from:
+    #0 0x7a4808b2b60f in malloc ../../../../src/libsanitizer/asan/asan_malloc_linux.cpp:67
+    #1 0x640ff7810e1f in main /home/cat/gsb/uid4005/hardening/ma_decode_harness.c:62
+
+SUMMARY: AddressSanitizer: 176479 byte(s) leaked in 1 allocation(s).
+
+[crash] crashes/crash_140_sample.flac_flachdr_8563mem
+
+=================================================================
+==3782759==ERROR: LeakSanitizer: detected memory leaks
+
+Direct leak of 1798052 byte(s) in 1 object(s) allocated from:
+    #0 0x7e3ad052b60f in malloc ../../../../src/libsanitizer/asan/asan_malloc_linux.cpp:67
+    #1 0x62cd758e1e1f in main /home/cat/gsb/uid4005/hardening/ma_decode_harness.c:62
+
+SUMMARY: AddressSanitizer: 1798052 byte(s) leaked in 1 allocation(s).
+
+[crash] crashes/crash_141_tone.flac_truncflip_8574mem
+
+=================================================================
+==3783375==ERROR: LeakSanitizer: detected memory leaks
+
+Direct leak of 17785 byte(s) in 1 object(s) allocated from:
+    #0 0x752fd132b60f in malloc ../../../../src/libsanitizer/asan/asan_malloc_linux.cpp:67
+    #1 0x5667973d4e1f in main /home/cat/gsb/uid4005/hardening/ma_decode_harness.c:62
+
+SUMMARY: AddressSanitizer: 17785 byte(s) leaked in 1 allocation(s).
+
+[crash] crashes/crash_142_sample.flac_flachdr_8711mem
+
+=================================================================
+==3784266==ERROR: LeakSanitizer: detected memory leaks
+
+Direct leak of 1798052 byte(s) in 1 object(s) allocated from:
+    #0 0x713ca8d2b60f in malloc ../../../../src/libsanitizer/asan/asan_malloc_linux.cpp:67
+    #1 0x5793df886e1f in main /home/cat/gsb/uid4005/hardening/ma_decode_harness.c:62
+
+SUMMARY: AddressSanitizer: 1798052 byte(s) leaked in 1 allocation(s).
+
+[crash] crashes/crash_143_tone.wav_hdrstorm_8720mem
+
+=================================================================
+==3783961==ERROR: LeakSanitizer: detected memory leaks
+
+Direct leak of 176479 byte(s) in 1 object(s) allocated from:
+    #0 0x7248ec12b60f in malloc ../../../../src/libsanitizer/asan/asan_malloc_linux.cpp:67
+    #1 0x650c79262e1f in main /home/cat/gsb/uid4005/hardening/ma_decode_harness.c:62
+
+SUMMARY: AddressSanitizer: 176479 byte(s) leaked in 1 allocation(s).
+
+[crash] crashes/crash_144_sample.flac_flachdr_8755mem
+
+=================================================================
+==3784097==ERROR: LeakSanitizer: detected memory leaks
+
+Direct leak of 1798052 byte(s) in 1 object(s) allocated from:
+    #0 0x76f77372b60f in malloc ../../../../src/libsanitizer/asan/asan_malloc_linux.cpp:67
+    #1 0x5abdcde93e1f in main /home/cat/gsb/uid4005/hardening/ma_decode_harness.c:62
+
+SUMMARY: AddressSanitizer: 1798052 byte(s) leaked in 1 allocation(s).
+
+[crash] crashes/crash_145_sample.flac_flachdr_8979mem
+
+=================================================================
+==3785788==ERROR: LeakSanitizer: detected memory leaks
+
+Direct leak of 1798052 byte(s) in 1 object(s) allocated from:
+    #0 0x73437e32b60f in malloc ../../../../src/libsanitizer/asan/asan_malloc_linux.cpp:67
+    #1 0x5c9f668c0e1f in main /home/cat/gsb/uid4005/hardening/ma_decode_harness.c:62
+
+SUMMARY: AddressSanitizer: 1798052 byte(s) leaked in 1 allocation(s).
+
+[crash] crashes/crash_146_sample.flac_flachdr_9327mem
+
+=================================================================
+==3788097==ERROR: LeakSanitizer: detected memory leaks
+
+Direct leak of 1798052 byte(s) in 1 object(s) allocated from:
+    #0 0x7af339b2b60f in malloc ../../../../src/libsanitizer/asan/asan_malloc_linux.cpp:67
+    #1 0x61ff2f7efe1f in main /home/cat/gsb/uid4005/hardening/ma_decode_harness.c:62
+
+SUMMARY: AddressSanitizer: 1798052 byte(s) leaked in 1 allocation(s).
+
+[crash] crashes/crash_147_sample.flac_flachdr_9459mem
+
+=================================================================
+==3788448==ERROR: LeakSanitizer: detected memory leaks
+
+Direct leak of 1798052 byte(s) in 1 object(s) allocated from:
+    #0 0x74fb0812b60f in malloc ../../../../src/libsanitizer/asan/asan_malloc_linux.cpp:67
+    #1 0x5d804c25ee1f in main /home/cat/gsb/uid4005/hardening/ma_decode_harness.c:62
+
+SUMMARY: AddressSanitizer: 1798052 byte(s) leaked in 1 allocation(s).
+
+[crash] crashes/crash_148_sample.flac_flachdr_9431mem
+
+=================================================================
+==3788641==ERROR: LeakSanitizer: detected memory leaks
+
+Direct leak of 1798052 byte(s) in 1 object(s) allocated from:
+    #0 0x73723772b60f in malloc ../../../../src/libsanitizer/asan/asan_malloc_linux.cpp:67
+    #1 0x57ffe8b96e1f in main /home/cat/gsb/uid4005/hardening/ma_decode_harness.c:62
+
+SUMMARY: AddressSanitizer: 1798052 byte(s) leaked in 1 allocation(s).
+
+[crash] crashes/crash_149_sample.flac_flachdr_9775mem
+
+=================================================================
+==3791086==ERROR: LeakSanitizer: detected memory leaks
+
+Direct leak of 1798052 byte(s) in 1 object(s) allocated from:
+    #0 0x744fb392b60f in malloc ../../../../src/libsanitizer/asan/asan_malloc_linux.cpp:67
+    #1 0x5d109eebbe1f in main /home/cat/gsb/uid4005/hardening/ma_decode_harness.c:62
+
+SUMMARY: AddressSanitizer: 1798052 byte(s) leaked in 1 allocation(s).
+
+[crash] crashes/crash_150_sample.flac_flachdr_10019mem
+
+=================================================================
+==3792066==ERROR: LeakSanitizer: detected memory leaks
+
+Direct leak of 1798052 byte(s) in 1 object(s) allocated from:
+    #0 0x7d7730b2b60f in malloc ../../../../src/libsanitizer/asan/asan_malloc_linux.cpp:67
+    #1 0x568cdc8b4e1f in main /home/cat/gsb/uid4005/hardening/ma_decode_harness.c:62
+
+SUMMARY: AddressSanitizer: 1798052 byte(s) leaked in 1 allocation(s).
+
+[crash] crashes/crash_151_sample.flac_flachdr_10003mem
+
+=================================================================
+==3792029==ERROR: LeakSanitizer: detected memory leaks
+
+Direct leak of 1798052 byte(s) in 1 object(s) allocated from:
+    #0 0x702dcdb2b60f in malloc ../../../../src/libsanitizer/asan/asan_malloc_linux.cpp:67
+    #1 0x5d9e68045e1f in main /home/cat/gsb/uid4005/hardening/ma_decode_harness.c:62
+
+SUMMARY: AddressSanitizer: 1798052 byte(s) leaked in 1 allocation(s).
+
+[crash] crashes/crash_152_sample.flac_flachdr_10131mem
+
+=================================================================
+==3792828==ERROR: LeakSanitizer: detected memory leaks
+
+Direct leak of 1798052 byte(s) in 1 object(s) allocated from:
+    #0 0x7131ca92b60f in malloc ../../../../src/libsanitizer/asan/asan_malloc_linux.cpp:67
+    #1 0x59deb0a43e1f in main /home/cat/gsb/uid4005/hardening/ma_decode_harness.c:62
+
+SUMMARY: AddressSanitizer: 1798052 byte(s) leaked in 1 allocation(s).
+
+[crash] crashes/crash_153_sample.flac_flachdr_10303mem
+
+=================================================================
+==3794284==ERROR: LeakSanitizer: detected memory leaks
+
+Direct leak of 1798052 byte(s) in 1 object(s) allocated from:
+    #0 0x72fa8332b60f in malloc ../../../../src/libsanitizer/asan/asan_malloc_linux.cpp:67
+    #1 0x6287b4b7fe1f in main /home/cat/gsb/uid4005/hardening/ma_decode_harness.c:62
+
+SUMMARY: AddressSanitizer: 1798052 byte(s) leaked in 1 allocation(s).
+
+[crash] crashes/crash_154_sample.flac_flachdr_10255mem
+
+=================================================================
+==3794286==ERROR: LeakSanitizer: detected memory leaks
+
+Direct leak of 1798052 byte(s) in 1 object(s) allocated from:
+    #0 0x7d078812b60f in malloc ../../../../src/libsanitizer/asan/asan_malloc_linux.cpp:67
+    #1 0x5ec3f19dfe1f in main /home/cat/gsb/uid4005/hardening/ma_decode_harness.c:62
+
+SUMMARY: AddressSanitizer: 1798052 byte(s) leaked in 1 allocation(s).
+
+[crash] crashes/crash_155_sample.flac_flachdr_10311mem
+
+=================================================================
+==3793867==ERROR: LeakSanitizer: detected memory leaks
+
+Direct leak of 1798052 byte(s) in 1 object(s) allocated from:
+    #0 0x714f25b2b60f in malloc ../../../../src/libsanitizer/asan/asan_malloc_linux.cpp:67
+    #1 0x573f57ff5e1f in main /home/cat/gsb/uid4005/hardening/ma_decode_harness.c:62
+
+SUMMARY: AddressSanitizer: 1798052 byte(s) leaked in 1 allocation(s).
+
+[crash] crashes/crash_156_sample.flac_flachdr_10371mem
+
+=================================================================
+==3794343==ERROR: LeakSanitizer: detected memory leaks
+
+Direct leak of 1798052 byte(s) in 1 object(s) allocated from:
+    #0 0x7f0290d2b60f in malloc ../../../../src/libsanitizer/asan/asan_malloc_linux.cpp:67
+    #1 0x63b013c74e1f in main /home/cat/gsb/uid4005/hardening/ma_decode_harness.c:62
+
+SUMMARY: AddressSanitizer: 1798052 byte(s) leaked in 1 allocation(s).
+
+[crash] crashes/crash_157_sample.flac_flachdr_10451mem
+
+=================================================================
+==3794540==ERROR: LeakSanitizer: detected memory leaks
+
+Direct leak of 1798052 byte(s) in 1 object(s) allocated from:
+    #0 0x799f8b32b60f in malloc ../../../../src/libsanitizer/asan/asan_malloc_linux.cpp:67
+    #1 0x5af99c3ace1f in main /home/cat/gsb/uid4005/hardening/ma_decode_harness.c:62
+
+SUMMARY: AddressSanitizer: 1798052 byte(s) leaked in 1 allocation(s).
+
+[crash] crashes/crash_158_sample.flac_flachdr_10455mem
+
+=================================================================
+==3794793==ERROR: LeakSanitizer: detected memory leaks
+
+Direct leak of 1798052 byte(s) in 1 object(s) allocated from:
+    #0 0x755649f2b60f in malloc ../../../../src/libsanitizer/asan/asan_malloc_linux.cpp:67
+    #1 0x5bab1dd78e1f in main /home/cat/gsb/uid4005/hardening/ma_decode_harness.c:62
+
+SUMMARY: AddressSanitizer: 1798052 byte(s) leaked in 1 allocation(s).
+
+[crash] crashes/crash_159_sample.flac_flachdr_10407mem
+
+=================================================================
+==3794794==ERROR: LeakSanitizer: detected memory leaks
+
+Direct leak of 1798052 byte(s) in 1 object(s) allocated from:
+    #0 0x77fb7212b60f in malloc ../../../../src/libsanitizer/asan/asan_malloc_linux.cpp:67
+    #1 0x5c603d615e1f in main /home/cat/gsb/uid4005/hardening/ma_decode_harness.c:62
+
+SUMMARY: AddressSanitizer: 1798052 byte(s) leaked in 1 allocation(s).
+
+[crash] crashes/crash_160_sample.flac_flachdr_10575mem
+
+=================================================================
+==3795746==ERROR: LeakSanitizer: detected memory leaks
+
+Direct leak of 1798052 byte(s) in 1 object(s) allocated from:
+    #0 0x711cec52b60f in malloc ../../../../src/libsanitizer/asan/asan_malloc_linux.cpp:67
+    #1 0x5e5c99f09e1f in main /home/cat/gsb/uid4005/hardening/ma_decode_harness.c:62
+
+SUMMARY: AddressSanitizer: 1798052 byte(s) leaked in 1 allocation(s).
+
+[crash] crashes/crash_161_sample.flac_flachdr_10579mem
+
+=================================================================
+==3795320==ERROR: LeakSanitizer: detected memory leaks
+
+Direct leak of 1798052 byte(s) in 1 object(s) allocated from:
+    #0 0x7aa7a2f2b60f in malloc ../../../../src/libsanitizer/asan/asan_malloc_linux.cpp:67
+    #1 0x631d78fade1f in main /home/cat/gsb/uid4005/hardening/ma_decode_harness.c:62
+
+SUMMARY: AddressSanitizer: 1798052 byte(s) leaked in 1 allocation(s).
+
+[crash] crashes/crash_162_sample.flac_flachdr_10587mem
+
+=================================================================
+==3795663==ERROR: LeakSanitizer: detected memory leaks
+
+Direct leak of 1798052 byte(s) in 1 object(s) allocated from:
+    #0 0x7ab956f2b60f in malloc ../../../../src/libsanitizer/asan/asan_malloc_linux.cpp:67
+    #1 0x583950213e1f in main /home/cat/gsb/uid4005/hardening/ma_decode_harness.c:62
+
+SUMMARY: AddressSanitizer: 1798052 byte(s) leaked in 1 allocation(s).
+
+[crash] crashes/crash_163_sample.flac_flachdr_10651mem
+
+=================================================================
+==3796160==ERROR: LeakSanitizer: detected memory leaks
+
+Direct leak of 1798052 byte(s) in 1 object(s) allocated from:
+    #0 0x7e3b6352b60f in malloc ../../../../src/libsanitizer/asan/asan_malloc_linux.cpp:67
+    #1 0x562486492e1f in main /home/cat/gsb/uid4005/hardening/ma_decode_harness.c:62
+
+SUMMARY: AddressSanitizer: 1798052 byte(s) leaked in 1 allocation(s).
+
+[crash] crashes/crash_164_sample.flac_flachdr_10819mem
+
+=================================================================
+==3796878==ERROR: LeakSanitizer: detected memory leaks
+
+Direct leak of 1798052 byte(s) in 1 object(s) allocated from:
+    #0 0x7ad58a12b60f in malloc ../../../../src/libsanitizer/asan/asan_malloc_linux.cpp:67
+    #1 0x5af8ee1abe1f in main /home/cat/gsb/uid4005/hardening/ma_decode_harness.c:62
+
+SUMMARY: AddressSanitizer: 1798052 byte(s) leaked in 1 allocation(s).
+
+[crash] crashes/crash_165_sample.flac_flachdr_11287mem
+
+=================================================================
+==3800159==ERROR: LeakSanitizer: detected memory leaks
+
+Direct leak of 1798052 byte(s) in 1 object(s) allocated from:
+    #0 0x76793672b60f in malloc ../../../../src/libsanitizer/asan/asan_malloc_linux.cpp:67
+    #1 0x57792e0aee1f in main /home/cat/gsb/uid4005/hardening/ma_decode_harness.c:62
+
+SUMMARY: AddressSanitizer: 1798052 byte(s) leaked in 1 allocation(s).
+
+[crash] crashes/crash_166_sample.flac_flachdr_11295mem
+
+=================================================================
+==3800518==ERROR: LeakSanitizer: detected memory leaks
+
+Direct leak of 1798052 byte(s) in 1 object(s) allocated from:
+    #0 0x7936f532b60f in malloc ../../../../src/libsanitizer/asan/asan_malloc_linux.cpp:67
+    #1 0x62d14d39de1f in main /home/cat/gsb/uid4005/hardening/ma_decode_harness.c:62
+
+SUMMARY: AddressSanitizer: 1798052 byte(s) leaked in 1 allocation(s).
+
+[crash] crashes/crash_167_tone.wav_hdrstorm_11440mem
+
+=================================================================
+==3800599==ERROR: LeakSanitizer: detected memory leaks
+
+Direct leak of 176479 byte(s) in 1 object(s) allocated from:
+    #0 0x7ddfd6d2b60f in malloc ../../../../src/libsanitizer/asan/asan_malloc_linux.cpp:67
+    #1 0x62f6ad3ffe1f in main /home/cat/gsb/uid4005/hardening/ma_decode_harness.c:62
+
+SUMMARY: AddressSanitizer: 176479 byte(s) leaked in 1 allocation(s).
+
+[crash] crashes/crash_168_sample.flac_flachdr_11731mem
+
+=================================================================
+==3802589==ERROR: LeakSanitizer: detected memory leaks
+
+Direct leak of 1798052 byte(s) in 1 object(s) allocated from:
+    #0 0x7faf3612b60f in malloc ../../../../src/libsanitizer/asan/asan_malloc_linux.cpp:67
+    #1 0x64ee65eede1f in main /home/cat/gsb/uid4005/hardening/ma_decode_harness.c:62
+
+SUMMARY: AddressSanitizer: 1798052 byte(s) leaked in 1 allocation(s).
+
+[crash] crashes/crash_169_sample.flac_flachdr_11811mem
+
+=================================================================
+==3803215==ERROR: LeakSanitizer: detected memory leaks
+
+Direct leak of 1798052 byte(s) in 1 object(s) allocated from:
+    #0 0x7e09c6b2b60f in malloc ../../../../src/libsanitizer/asan/asan_malloc_linux.cpp:67
+    #1 0x5fd4228d6e1f in main /home/cat/gsb/uid4005/hardening/ma_decode_harness.c:62
+
+SUMMARY: AddressSanitizer: 1798052 byte(s) leaked in 1 allocation(s).
+
+[crash] crashes/crash_170_sample.flac_flachdr_11827mem
+
+=================================================================
+==3803232==ERROR: LeakSanitizer: detected memory leaks
+
+Direct leak of 1798052 byte(s) in 1 object(s) allocated from:
+    #0 0x79894f92b60f in malloc ../../../../src/libsanitizer/asan/asan_malloc_linux.cpp:67
+    #1 0x5d820ad7ae1f in main /home/cat/gsb/uid4005/hardening/ma_decode_harness.c:62
+
+SUMMARY: AddressSanitizer: 1798052 byte(s) leaked in 1 allocation(s).
+
+[crash] crashes/crash_171_sample.flac_flachdr_11939mem
+
+=================================================================
+==3803955==ERROR: LeakSanitizer: detected memory leaks
+
+Direct leak of 1798052 byte(s) in 1 object(s) allocated from:
+    #0 0x7b65d732b60f in malloc ../../../../src/libsanitizer/asan/asan_malloc_linux.cpp:67
+    #1 0x5a1a81849e1f in main /home/cat/gsb/uid4005/hardening/ma_decode_harness.c:62
+
+SUMMARY: AddressSanitizer: 1798052 byte(s) leaked in 1 allocation(s).
+
+[crash] crashes/crash_172_sample.flac_flachdr_11951mem
+
+=================================================================
+==3804392==ERROR: LeakSanitizer: detected memory leaks
+
+Direct leak of 1798052 byte(s) in 1 object(s) allocated from:
+    #0 0x7677d812b60f in malloc ../../../../src/libsanitizer/asan/asan_malloc_linux.cpp:67
+    #1 0x5b9c4f840e1f in main /home/cat/gsb/uid4005/hardening/ma_decode_harness.c:62
+
+SUMMARY: AddressSanitizer: 1798052 byte(s) leaked in 1 allocation(s).
+
+
+total_cases=20088 unique_crashes=172

@@ -86499,7 +86499,7 @@ static MA_INLINE ma_bool32 ma_dr_flac__use_64_bit_prediction(ma_uint32 bitsPerSa
 {
     return bitsPerSample + precision + ma_dr_flac__ilog2_u32(order) > 32;
 }
-#if defined(__clang__)
+#if defined(__clang__) || (defined(__GNUC__) && (__GNUC__ >= 8))
 __attribute__((no_sanitize("signed-integer-overflow")))
 #endif
 static MA_INLINE ma_int32 ma_dr_flac__calculate_prediction_32_s32(ma_uint32 order, ma_int32 shift, const ma_int32* coefficients, ma_int32* pDecodedSamples)
@@ -87837,7 +87837,7 @@ static ma_bool32 ma_dr_flac__read_and_seek_residual__rice(ma_dr_flac_bs* bs, ma_
     }
     return MA_TRUE;
 }
-#if defined(__clang__)
+#if defined(__clang__) || (defined(__GNUC__) && (__GNUC__ >= 8))
 __attribute__((no_sanitize("signed-integer-overflow")))
 #endif
 static ma_bool32 ma_dr_flac__decode_samples_with_residual__unencoded(ma_dr_flac_bs* bs, ma_uint32 bitsPerSample, ma_uint32 count, ma_uint8 unencodedBitsPerSample, ma_uint32 lpcOrder, ma_int32 lpcShift, ma_uint32 lpcPrecision, const ma_int32* coefficients, ma_int32* pSamplesOut)
