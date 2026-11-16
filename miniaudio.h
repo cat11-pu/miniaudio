@@ -59314,6 +59314,11 @@ MA_API ma_uint32 ma_get_bytes_per_sample(ma_format format)
         4,  /* s32 */
         4,  /* f32 */
     };
+
+    if ((ma_int32)format < 0 || format >= ma_format_count) {
+        return 0;
+    }
+
     return sizes[format];
 }
 
@@ -59405,6 +59410,7 @@ static ma_result ma_data_source_resolve_current(ma_data_source* pDataSource, ma_
 static ma_result ma_data_source_read_pcm_frames_from_backend(ma_data_source* pDataSource, void* pFramesOut, ma_uint64 frameCount, ma_uint64* pFramesRead)
 {
     ma_data_source_base* pDataSourceBase = (ma_data_source_base*)pDataSource;
+    ma_result result;
 
     MA_ASSERT(pDataSourceBase                 != NULL);
     MA_ASSERT(pDataSourceBase->vtable         != NULL);
@@ -59412,13 +59418,18 @@ static ma_result ma_data_source_read_pcm_frames_from_backend(ma_data_source* pDa
     MA_ASSERT(pFramesRead != NULL);
 
     if (pFramesOut != NULL) {
-        return pDataSourceBase->vtable->onRead(pDataSourceBase, pFramesOut, frameCount, pFramesRead);
+        result = pDataSourceBase->vtable->onRead(pDataSourceBase, pFramesOut, frameCount, pFramesRead);
+        if (*pFramesRead > frameCount) {
+            *pFramesRead = 0;
+            return MA_INVALID_DATA;
+        }
+
+        return result;
     } else {
         /*
         No output buffer. Probably seeking forward. Read and discard. Can probably optimize this in terms of
         onSeek and onGetCursor, but need to keep in mind that the data source may not implement these functions.
         */
-        ma_result result;
         ma_uint64 framesRead;
         ma_format format;
         ma_uint32 channels;
@@ -59443,6 +59454,14 @@ static ma_result ma_data_source_read_pcm_frames_from_backend(ma_data_source* pDa
             result = pDataSourceBase->vtable->onRead(pDataSourceBase, pDiscardBuffer, framesToRead, &framesReadThisIteration);
             if (result != MA_SUCCESS) {
                 return result;
+            }
+            if (framesReadThisIteration > framesToRead) {
+                *pFramesRead = 0;
+                return MA_INVALID_DATA;
+            }
+            if (framesReadThisIteration == 0) {
+                *pFramesRead = framesRead;
+                return MA_AT_END;
             }
 
             framesRead += framesReadThisIteration;
@@ -59754,9 +59773,9 @@ MA_API ma_result ma_data_source_get_data_format(ma_data_source* pDataSource, ma_
 {
     ma_data_source_base* pDataSourceBase = (ma_data_source_base*)pDataSource;
     ma_result result;
-    ma_format format;
-    ma_uint32 channels;
-    ma_uint32 sampleRate;
+    ma_format format = ma_format_unknown;
+    ma_uint32 channels = 0;
+    ma_uint32 sampleRate = 0;
 
     /* Initialize to defaults for safety just in case the data source does not implement this callback. */
     if (pFormat != NULL) {
@@ -59785,6 +59804,16 @@ MA_API ma_result ma_data_source_get_data_format(ma_data_source* pDataSource, ma_
     result = pDataSourceBase->vtable->onGetDataFormat(pDataSource, &format, &channels, &sampleRate, pChannelMap, channelMapCap);
     if (result != MA_SUCCESS) {
         return result;
+    }
+
+    if ((ma_int32)format < 0 || format == ma_format_unknown || format >= ma_format_count) {
+        return MA_INVALID_DATA;
+    }
+    if (channels == 0 || channels > MA_MAX_CHANNELS) {
+        return MA_INVALID_DATA;
+    }
+    if (sampleRate == 0) {
+        return MA_INVALID_DATA;
     }
 
     if (pFormat != NULL) {
